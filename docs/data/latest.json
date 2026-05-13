@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T13:01:28+08:00",
+  "generated_at": "2026-05-13T19:38:20+08:00",
   "source": "http://xxfb.mwr.cn/sq_djdh.html",
   "records": [
     {
@@ -8589,7 +8589,7 @@
       "basin": "长江",
       "river": "汉江",
       "admin_region": "陕西",
-      "water_level_m": 177.36,
+      "water_level_m": 177.26,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -15107,7 +15107,7 @@
     },
     {
       "station_id": "365",
-      "datetime": "2026-05-12T08:00:00+08:00",
+      "datetime": "2026-05-13T08:00:00+08:00",
       "station": "总干渠水文站",
       "basin": "黄河",
       "river": "黄河",
