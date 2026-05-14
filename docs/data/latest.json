@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T13:00:52+08:00",
+  "generated_at": "2026-05-14T19:24:05+08:00",
   "source": "http://xxfb.mwr.cn/sq_djdh.html",
   "records": [
     {
@@ -5152,12 +5152,12 @@
     },
     {
       "station_id": "1335",
-      "datetime": "2026-05-13T08:00:00+08:00",
+      "datetime": "2026-05-14T08:00:00+08:00",
       "station": "冯马庙(二)",
       "basin": "珠江",
       "river": "洪奇沥水道",
       "admin_region": "广东",
-      "water_level_m": 1.25,
+      "water_level_m": 1.48,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5757,12 +5757,12 @@
     },
     {
       "station_id": "1333",
-      "datetime": "2026-05-13T08:00:00+08:00",
+      "datetime": "2026-05-14T08:00:00+08:00",
       "station": "天河(二)",
       "basin": "磨刀门",
       "river": "西海水道",
       "admin_region": "广东",
-      "water_level_m": 0.98,
+      "water_level_m": 1.1,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
