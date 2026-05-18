@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T13:36:32+08:00",
+  "generated_at": "2026-05-18T20:50:24+08:00",
   "source": "http://xxfb.mwr.cn/sq_djdh.html",
   "records": [
     {
@@ -449,7 +449,7 @@
       "basin": "塔里木河",
       "river": "叶尔羌河",
       "admin_region": "新疆",
-      "water_level_m": 1921.07,
+      "water_level_m": 1921.06,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
