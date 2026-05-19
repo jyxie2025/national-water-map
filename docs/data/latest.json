@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T13:15:31+08:00",
+  "generated_at": "2026-05-19T20:23:35+08:00",
   "source": "http://xxfb.mwr.cn/sq_djdh.html",
   "records": [
     {
@@ -2908,18 +2908,18 @@
     },
     {
       "station_id": "278",
-      "datetime": "2026-05-18T08:00:00+08:00",
+      "datetime": "2026-05-19T08:00:00+08:00",
       "station": "侯壁",
       "basin": "海河流域",
       "river": "浊漳河",
       "admin_region": "山西",
-      "water_level_m": 481.4,
+      "water_level_m": 481.59,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
     {
       "station_id": "169",
-      "datetime": "2026-05-18T08:00:00+08:00",
+      "datetime": "2026-05-19T08:00:00+08:00",
       "station": "乌龙矶",
       "basin": "海河流域",
       "river": "滦河",
