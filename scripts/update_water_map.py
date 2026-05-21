@@ -4,11 +4,9 @@ from __future__ import annotations
 import base64
 import csv
 import json
-import math
 import re
 import sys
 import time
-from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Iterable
@@ -34,7 +32,6 @@ LATEST_JSON = DATA_DIR / "latest_river_water_levels.json"
 DOCS_STATIONS = DOCS_DATA_DIR / "stations.json"
 DOCS_LATEST = DOCS_DATA_DIR / "latest.json"
 DOCS_HISTORY = DOCS_DATA_DIR / "history.csv"
-DOCS_RIVERS = DOCS_DATA_DIR / "river_lines.geojson"
 DOCS_HTML = DOCS_DIR / "index.html"
 
 STATION_FIELDS = [
@@ -98,8 +95,7 @@ def decode_coord(value: str | None) -> float | None:
     try:
         first = base64.b64decode(value)
         second = base64.b64decode(first)
-        text = second.decode("utf-8")
-        return float(text)
+        return float(second.decode("utf-8"))
     except Exception:
         return None
 
@@ -118,6 +114,17 @@ def clean_text(value: object) -> str:
     return "" if value is None else re.sub(r"\s+", " ", str(value)).strip()
 
 
+def normalize_datetime(value: str) -> str:
+    if not value:
+        return ""
+    for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M"):
+        try:
+            return datetime.strptime(value, fmt).replace(tzinfo=TZ).isoformat()
+        except ValueError:
+            pass
+    return value
+
+
 def parse_iso_datetime(value: str) -> datetime | None:
     if not value:
         return None
@@ -127,6 +134,11 @@ def parse_iso_datetime(value: str) -> datetime | None:
         return None
 
 
+def record_date(value: str) -> str:
+    parsed = parse_iso_datetime(value)
+    return parsed.date().isoformat() if parsed else value[:10]
+
+
 def reading_status(dt: str, level: float | None, fetched_at_dt: datetime) -> str:
     if not dt or level is None:
         return "no_recent_reading"
@@ -134,6 +146,15 @@ def reading_status(dt: str, level: float | None, fetched_at_dt: datetime) -> str
     if reading_dt and fetched_at_dt - reading_dt > timedelta(days=STALE_AFTER_DAYS):
         return "stale"
     return "current"
+
+
+def latest_data_timestamp(latest_rows: list[dict[str, object]], fallback: str) -> str:
+    values: list[datetime] = []
+    for row in latest_rows:
+        parsed = parse_iso_datetime(str(row.get("datetime") or ""))
+        if parsed:
+            values.append(parsed)
+    return max(values).isoformat(timespec="seconds") if values else fallback
 
 
 def fetch_river_rows(fetched_at_dt: datetime) -> list[dict[str, object]]:
@@ -184,22 +205,12 @@ def fetch_river_rows(fetched_at_dt: datetime) -> list[dict[str, object]]:
     return rows
 
 
-def normalize_datetime(value: str) -> str:
-    if not value:
+def format_value(value: object) -> str:
+    if value is None:
         return ""
-    for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M"):
-        try:
-            return datetime.strptime(value, fmt).replace(tzinfo=TZ).isoformat()
-        except ValueError:
-            pass
-    return value
-
-
-def record_date(value: str) -> str:
-    try:
-        return datetime.fromisoformat(value).date().isoformat()
-    except ValueError:
-        return value[:10]
+    if isinstance(value, float):
+        return f"{value:.6f}".rstrip("0").rstrip(".")
+    return str(value)
 
 
 def write_csv(path: Path, rows: Iterable[dict[str, object]], fieldnames: list[str]) -> None:
@@ -209,14 +220,6 @@ def write_csv(path: Path, rows: Iterable[dict[str, object]], fieldnames: list[st
         writer.writeheader()
         for row in rows:
             writer.writerow({field: format_value(row.get(field)) for field in fieldnames})
-
-
-def format_value(value: object) -> str:
-    if value is None:
-        return ""
-    if isinstance(value, float):
-        return f"{value:.6f}".rstrip("0").rstrip(".")
-    return str(value)
 
 
 def load_history(path: Path) -> list[dict[str, str]]:
@@ -254,61 +257,25 @@ def merge_history(existing: list[dict[str, str]], latest_rows: list[dict[str, ob
 
 
 def station_rows(latest_rows: list[dict[str, object]]) -> list[dict[str, object]]:
-    stations = {}
+    stations: dict[str, dict[str, object]] = {}
     for row in latest_rows:
-        sid = str(row["station_id"])
-        stations[sid] = {field: row.get(field) for field in STATION_FIELDS}
+        stations[str(row["station_id"])] = {field: row.get(field) for field in STATION_FIELDS}
     return sorted(stations.values(), key=lambda item: (str(item["basin"]), str(item["river"]), str(item["station"])))
-
-
-def build_river_lines(stations: list[dict[str, object]]) -> dict[str, object]:
-    groups: dict[tuple[str, str], list[dict[str, object]]] = defaultdict(list)
-    for station in stations:
-        if station.get("snap_lng") is None or station.get("snap_lat") is None:
-            continue
-        groups[(str(station.get("basin") or ""), str(station.get("river") or ""))].append(station)
-
-    features = []
-    for (basin, river), points in groups.items():
-        if len(points) < 2 or not river:
-            continue
-        lngs = [float(p["snap_lng"]) for p in points]
-        lats = [float(p["snap_lat"]) for p in points]
-        if max(lngs) - min(lngs) >= max(lats) - min(lats):
-            ordered = sorted(points, key=lambda p: (float(p["snap_lng"]), float(p["snap_lat"])))
-        else:
-            ordered = sorted(points, key=lambda p: (float(p["snap_lat"]), float(p["snap_lng"])))
-        coords = []
-        seen = set()
-        for point in ordered:
-            coord = (round(float(point["snap_lng"]), 6), round(float(point["snap_lat"]), 6))
-            if coord not in seen:
-                coords.append([coord[0], coord[1]])
-                seen.add(coord)
-        if len(coords) < 2:
-            continue
-        features.append(
-            {
-                "type": "Feature",
-                "properties": {"basin": basin, "river": river, "station_count": len(points), "source": "station_sequence"},
-                "geometry": {"type": "LineString", "coordinates": coords},
-            }
-        )
-    return {"type": "FeatureCollection", "features": features}
 
 
 def write_docs(stations: list[dict[str, object]], latest_rows: list[dict[str, object]], history: list[dict[str, object]], fetched_at: str) -> None:
     DOCS_DATA_DIR.mkdir(parents=True, exist_ok=True)
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
+    data_updated_at = latest_data_timestamp(latest_rows, fetched_at)
 
     stations_payload = {
-        "generated_at": fetched_at,
+        "generated_at": data_updated_at,
         "source": SOURCE_URL,
-        "snap_note": "站点使用水利部全国水雨情信息站点坐标；河线为同名河流站点序列线，用于确保站点在可视化中落在对应河流线上。",
+        "coordinate_note": "站点使用水利部全国水雨情信息站点坐标；页面不绘制站点连线。",
         "stations": stations,
     }
     latest_payload = {
-        "generated_at": fetched_at,
+        "generated_at": data_updated_at,
         "source": SOURCE_URL,
         "records": [
             {
@@ -328,7 +295,6 @@ def write_docs(stations: list[dict[str, object]], latest_rows: list[dict[str, ob
     DOCS_STATIONS.write_text(json.dumps(stations_payload, ensure_ascii=False, indent=2), encoding="utf-8")
     DOCS_LATEST.write_text(json.dumps(latest_payload, ensure_ascii=False, indent=2), encoding="utf-8")
     write_csv(DOCS_HISTORY, history, HISTORY_FIELDS)
-    DOCS_RIVERS.write_text(json.dumps(build_river_lines(stations), ensure_ascii=False), encoding="utf-8")
     (DOCS_DIR / ".nojekyll").write_text("", encoding="utf-8")
     DOCS_HTML.write_text(render_html(), encoding="utf-8")
 
@@ -338,7 +304,7 @@ def render_html() -> str:
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>全国河道站实时水位地图</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
@@ -348,146 +314,171 @@ def render_html() -> str:
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
   <style>
     :root {
-      --ink: #172033;
-      --muted: #607086;
-      --line: #d8e0ea;
-      --surface: #ffffff;
-      --bg: #f4f7fb;
+      --ink: #142033;
+      --muted: #617184;
+      --line: #d8e1ea;
+      --surface: rgba(255, 255, 255, .94);
       --blue: #2563eb;
-      --green: #059669;
-      --amber: #d97706;
-      --red: #dc2626;
+      --red: #ef4444;
+      --green: #16a34a;
+      --gray: #64748b;
+      --shadow: 0 14px 36px rgba(15, 23, 42, .18);
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
     }
     * { box-sizing: border-box; }
+    html, body { height: 100%; }
     body {
       margin: 0;
+      overflow: hidden;
+      color: var(--ink);
+      background: #eef3f8;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
-      background: var(--bg);
-      color: var(--ink);
     }
-    main {
-      display: grid;
-      grid-template-columns: 330px 1fr;
-      min-height: 100vh;
-    }
-    aside {
-      background: var(--surface);
-      border-right: 1px solid var(--line);
-      padding: 18px 16px;
-      overflow: auto;
-    }
-    h1 {
-      margin: 0 0 6px;
-      font-size: 24px;
-      line-height: 1.16;
-      letter-spacing: 0;
-    }
-    .subhead {
-      margin: 0 0 16px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.5;
-    }
-    .filters {
-      display: grid;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-    label {
-      display: grid;
-      gap: 5px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-    select, input, button {
-      height: 34px;
-      border: 1px solid var(--line);
-      border-radius: 7px;
-      background: #fff;
-      color: var(--ink);
-      font: inherit;
-      font-size: 13px;
-      padding: 0 9px;
-    }
+    button, input, select { font: inherit; color: var(--ink); }
     button {
       cursor: pointer;
-      padding: 0 11px;
-    }
-    button.active {
-      border-color: var(--blue);
-      color: var(--blue);
-      background: #eff6ff;
-      font-weight: 600;
-    }
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-      margin: 12px 0;
-    }
-    .metric {
+      height: 38px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 9px 10px;
-      background: #fbfdff;
+      padding: 0 12px;
+      background: rgba(255, 255, 255, .96);
+      white-space: nowrap;
     }
-    .metric span {
+    button.primary { border-color: var(--blue); background: var(--blue); color: #fff; }
+    button.icon {
+      width: 40px;
+      padding: 0;
+      display: inline-grid;
+      place-items: center;
+      font-size: 18px;
+      line-height: 1;
+    }
+    #map {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
+    .topbar {
+      position: fixed;
+      top: calc(10px + var(--safe-top));
+      left: 12px;
+      right: 12px;
+      z-index: 520;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      pointer-events: none;
+    }
+    .brand,
+    .toolbar,
+    .filter-panel,
+    .station-sheet,
+    .legend {
+      background: var(--surface);
+      border: 1px solid rgba(216, 225, 234, .95);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+    .brand {
+      min-width: 0;
+      border-radius: 10px;
+      padding: 9px 12px;
+      pointer-events: auto;
+    }
+    .brand-title {
       display: block;
+      font-size: 17px;
+      line-height: 1.15;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .brand-meta {
+      display: block;
+      max-width: min(58vw, 470px);
+      margin-top: 4px;
       color: var(--muted);
       font-size: 12px;
-      margin-bottom: 4px;
+      line-height: 1.25;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
-    .metric strong {
-      font-size: 17px;
-    }
-    .station-panel {
-      border-top: 1px solid var(--line);
-      padding-top: 14px;
-      margin-top: 14px;
-    }
-    .station-title {
-      margin: 0 0 4px;
-      font-size: 18px;
-    }
-    .station-meta {
-      margin: 0 0 10px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.5;
-    }
-    .range-controls {
+    .toolbar {
       display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      margin-bottom: 8px;
+      gap: 7px;
+      border-radius: 10px;
+      padding: 6px;
+      pointer-events: auto;
     }
-    #years-input { width: 62px; }
-    #chart {
-      height: 320px;
+    .filter-panel {
+      position: fixed;
+      top: calc(74px + var(--safe-top));
+      left: 12px;
+      z-index: 530;
+      width: min(342px, calc(100vw - 24px));
+      max-height: calc(100vh - 104px - var(--safe-top));
+      overflow: auto;
+      border-radius: 10px;
+      padding: 14px;
+      opacity: 0;
+      transform: translateX(calc(-100% - 20px));
+      transition: transform .2s ease, opacity .2s ease;
+    }
+    .filter-panel.open { opacity: 1; transform: translateX(0); }
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .panel-head h2 { margin: 0; font-size: 17px; }
+    .filters { display: grid; gap: 10px; }
+    label { display: grid; gap: 5px; color: var(--muted); font-size: 12px; }
+    select, input {
+      width: 100%;
+      height: 36px;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: #fff;
+      padding: 0 10px;
+      font-size: 14px;
     }
-    .map-wrap {
-      position: relative;
+    .filter-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .stat {
       min-width: 0;
-    }
-    #map {
-      height: 100vh;
-      width: 100%;
-    }
-    .legend {
-      position: absolute;
-      right: 14px;
-      bottom: 20px;
-      z-index: 500;
-      background: rgba(255,255,255,.94);
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 10px 12px;
-      color: var(--muted);
+      padding: 8px 9px;
+      background: #fbfdff;
+    }
+    .stat span { display: block; margin-bottom: 3px; color: var(--muted); font-size: 12px; }
+    .stat strong { font-size: 16px; }
+    .legend {
+      position: fixed;
+      top: calc(82px + var(--safe-top));
+      right: 12px;
+      z-index: 500;
+      border-radius: 10px;
+      padding: 9px 11px;
+      color: #415166;
       font-size: 12px;
-      box-shadow: 0 8px 30px rgba(23,32,51,.12);
+      line-height: 1.7;
     }
     .dot {
       display: inline-block;
@@ -496,62 +487,187 @@ def render_html() -> str:
       border-radius: 50%;
       margin-right: 6px;
     }
-    .popup-title { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
-    .popup-line { color: #3a4556; line-height: 1.45; }
-    @media (max-width: 920px) {
-      main { grid-template-columns: 1fr; }
-      aside { border-right: 0; border-bottom: 1px solid var(--line); max-height: 58vh; }
-      #map { height: 62vh; }
+    .station-sheet {
+      position: fixed;
+      right: 12px;
+      bottom: calc(18px + var(--safe-bottom));
+      z-index: 540;
+      width: min(450px, calc(100vw - 24px));
+      max-height: min(68vh, 620px);
+      overflow: hidden;
+      border-radius: 12px;
+      transform: translateY(calc(100% - 58px));
+      transition: transform .24s ease;
+    }
+    .station-sheet.open { transform: translateY(0); }
+    .sheet-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+      min-height: 58px;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .station-title { margin: 0; font-size: 17px; line-height: 1.2; }
+    .station-meta { margin: 4px 0 0; color: var(--muted); font-size: 12px; line-height: 1.35; }
+    .sheet-body {
+      max-height: calc(min(68vh, 620px) - 58px);
+      overflow: auto;
+      padding: 12px;
+      background: rgba(255,255,255,.98);
+    }
+    .reading-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .reading-card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px;
+      background: #fbfdff;
+    }
+    .reading-card span { display: block; margin-bottom: 4px; color: var(--muted); font-size: 11px; }
+    .reading-card strong { font-size: 15px; white-space: nowrap; }
+    .trend-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 24px;
+      min-width: 0;
+      border-radius: 999px;
+      padding: 0 8px;
+      color: #fff;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .range-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 4px 0 10px;
+    }
+    .range-controls button { height: 32px; padding: 0 9px; font-size: 13px; }
+    .range-controls button.active { border-color: var(--blue); background: #eff6ff; color: var(--blue); font-weight: 600; }
+    #years-input { width: 70px; height: 32px; font-size: 13px; }
+    #chart {
+      height: 310px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+    .popup-title { margin-bottom: 5px; font-size: 14px; font-weight: 700; }
+    .popup-line { color: #374151; line-height: 1.45; }
+    .leaflet-control-layers,
+    .leaflet-control-zoom {
+      border: 1px solid rgba(216, 225, 234, .95) !important;
+      border-radius: 8px !important;
+      box-shadow: var(--shadow) !important;
+      overflow: hidden;
+    }
+    @media (max-width: 760px) {
+      .topbar { top: calc(8px + var(--safe-top)); left: 8px; right: 8px; }
+      .brand { padding: 8px 10px; }
+      .brand-title { font-size: 15px; }
+      .brand-meta { max-width: 50vw; font-size: 11px; }
+      .toolbar { gap: 5px; padding: 5px; }
+      button { height: 36px; border-radius: 9px; }
+      button.icon { width: 38px; }
+      .filter-panel {
+        top: calc(64px + var(--safe-top));
+        left: 8px;
+        width: calc(100vw - 16px);
+        max-height: min(66vh, 520px);
+        padding: 12px;
+      }
+      .legend { display: none; }
+      .station-sheet {
+        left: 8px;
+        right: 8px;
+        bottom: calc(8px + var(--safe-bottom));
+        width: auto;
+        max-height: 72vh;
+        border-radius: 14px;
+      }
+      .sheet-body { max-height: calc(72vh - 58px); }
+      .reading-row { grid-template-columns: 1fr 1fr; }
+      .reading-card:nth-child(3) { grid-column: 1 / -1; }
       #chart { height: 260px; }
+      .leaflet-control-zoom { margin-top: 72px !important; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <aside>
-      <h1>全国河道站实时水位</h1>
-      <p class="subhead">来源：全国水雨情信息。地图为实时快照，点击站点查看长期累积水位变化。</p>
+  <div id="map"></div>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-title">全国河道站实时水位</span>
+      <span class="brand-meta" id="updated-at">正在加载数据</span>
+    </div>
+    <div class="toolbar">
+      <button type="button" class="icon" id="locate-btn" title="定位到附近水域" aria-label="定位到附近水域">◎</button>
+      <button type="button" id="filter-toggle">筛选</button>
+    </div>
+  </header>
 
-      <section class="filters" aria-label="筛选">
-        <label>流域<select id="basin-filter"><option value="">全部流域</option></select></label>
-        <label>行政区划<select id="admin-filter"><option value="">全部行政区划</option></select></label>
-        <label>河流<select id="river-filter"><option value="">全部河流</option></select></label>
-        <label>站点<input id="station-filter" type="search" placeholder="输入站名关键字" /></label>
-      </section>
-
-      <div class="metrics">
-        <div class="metric"><span>显示站点</span><strong id="visible-count">--</strong></div>
-        <div class="metric"><span>全部河道站</span><strong id="total-count">--</strong></div>
-        <div class="metric"><span>最高水位</span><strong id="max-level">--</strong></div>
-        <div class="metric"><span>更新时间</span><strong id="updated-at">--</strong></div>
-      </div>
-
-      <section class="station-panel">
-        <h2 class="station-title" id="station-title">选择一个站点</h2>
-        <p class="station-meta" id="station-meta">在地图上点击站点，或用筛选框定位站点。</p>
-        <div class="range-controls" aria-label="趋势时间范围">
-          <button type="button" data-days="7">1周</button>
-          <button type="button" data-days="30">1月</button>
-          <button type="button" data-days="90">3个月</button>
-          <button type="button" data-days="180">6个月</button>
-          <button type="button" data-days="365">1年</button>
-          <button type="button" data-all="true">全部</button>
-          <input id="years-input" type="number" min="1" max="50" value="2" aria-label="自定义年数" />
-          <button type="button" id="apply-years">N年</button>
-        </div>
-        <div id="chart"></div>
-      </section>
-    </aside>
-    <section class="map-wrap">
-      <div id="map"></div>
-      <div class="legend">
-        <div><span class="dot" style="background:#2563eb"></span>正常</div>
-        <div><span class="dot" style="background:#d97706"></span>接近警戒</div>
-        <div><span class="dot" style="background:#dc2626"></span>超警戒</div>
-        <div><span class="dot" style="background:#64748b"></span>非实时/暂无水位</div>
-      </div>
+  <aside class="filter-panel" id="filter-panel" aria-label="筛选">
+    <div class="panel-head">
+      <h2>筛选站点</h2>
+      <button type="button" class="icon" id="filter-close" aria-label="收起筛选">×</button>
+    </div>
+    <section class="filters">
+      <label>流域<select id="basin-filter"><option value="">全部流域</option></select></label>
+      <label>行政区划<select id="admin-filter"><option value="">全部行政区划</option></select></label>
+      <label>河流<select id="river-filter"><option value="">全部河流</option></select></label>
+      <label>站点<input id="station-filter" type="search" placeholder="输入站名关键词" /></label>
     </section>
-  </main>
+    <div class="filter-actions">
+      <button type="button" id="clear-filters">清空</button>
+      <button type="button" class="primary" id="apply-filters">查看</button>
+    </div>
+    <div class="stats">
+      <div class="stat"><span>显示站点</span><strong id="visible-count">--</strong></div>
+      <div class="stat"><span>全部站点</span><strong id="total-count">--</strong></div>
+    </div>
+  </aside>
+
+  <div class="legend">
+    <div><span class="dot" style="background:#ef4444"></span>上涨 ≥5cm</div>
+    <div><span class="dot" style="background:#2563eb"></span>下降 ≥5cm</div>
+    <div><span class="dot" style="background:#16a34a"></span>稳定 &lt;5cm</div>
+    <div><span class="dot" style="background:#64748b"></span>非实时/暂无</div>
+  </div>
+
+  <section class="station-sheet" id="station-sheet" aria-label="站点水位趋势">
+    <div class="sheet-head">
+      <div>
+        <h2 class="station-title" id="station-title">点击站点查看水位</h2>
+        <p class="station-meta" id="station-meta">可定位到附近水域，也可打开筛选查找站点。</p>
+      </div>
+      <button type="button" class="icon" id="sheet-close" aria-label="收起站点详情">⌄</button>
+    </div>
+    <div class="sheet-body">
+      <div class="reading-row">
+        <div class="reading-card"><span>最新水位</span><strong id="latest-level">--</strong></div>
+        <div class="reading-card"><span>变化趋势</span><strong id="trend-label">--</strong></div>
+        <div class="reading-card"><span>更新时间</span><strong id="latest-time">--</strong></div>
+      </div>
+      <div class="range-controls" aria-label="趋势时间范围">
+        <button type="button" data-days="7">1周</button>
+        <button type="button" data-days="30" class="active">1月</button>
+        <button type="button" data-days="90">3个月</button>
+        <button type="button" data-days="180">6个月</button>
+        <button type="button" data-days="365">1年</button>
+        <button type="button" data-all="true">全部</button>
+        <input id="years-input" type="number" min="1" max="50" value="2" aria-label="自定义年数" />
+        <button type="button" id="apply-years">应用</button>
+      </div>
+      <div id="chart"></div>
+    </div>
+  </section>
 
   <script>
     const state = {
@@ -560,19 +676,46 @@ def render_html() -> str:
       historyById: new Map(),
       markersById: new Map(),
       selectedId: null,
-      selectedRangeDays: 60,
-      riversLayer: null,
-      cluster: null
+      selectedRangeDays: 30,
+      cluster: null,
+      userLayer: null
     };
 
-    const map = L.map("map", { preferCanvas: true }).setView([34.5, 108.5], 5);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 18,
-      attribution: "&copy; OpenStreetMap contributors"
-    }).addTo(map);
-    state.cluster = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 46 });
+    const trendStyles = {
+      rising: { label: "上涨", color: "#ef4444" },
+      falling: { label: "下降", color: "#2563eb" },
+      stable: { label: "稳定", color: "#16a34a" },
+      unavailable: { label: "暂无", color: "#64748b" }
+    };
+
+    const map = L.map("map", { preferCanvas: true, zoomControl: true }).setView([34.5, 108.5], 5);
+    const baseLayers = {
+      "地图": L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: "&copy; OpenStreetMap contributors"
+      }),
+      "卫星": L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+        maxZoom: 18,
+        attribution: "Tiles &copy; Esri"
+      }),
+      "浅色": L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+        maxZoom: 19,
+        attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
+      }),
+      "地形": L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
+        maxZoom: 17,
+        attribution: "&copy; OpenTopoMap"
+      })
+    };
+    baseLayers["地图"].addTo(map);
+    L.control.layers(baseLayers, null, { position: "bottomleft", collapsed: true }).addTo(map);
+    state.cluster = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 42 });
     map.addLayer(state.cluster);
 
+    const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (ch) => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    }[ch]));
+    const uniqueSorted = (items) => [...new Set(items.filter(Boolean))].sort((a, b) => a.localeCompare(b, "zh-CN"));
     const hasMeasuredLevel = (record) =>
       record?.water_level_m !== null &&
       record?.water_level_m !== "" &&
@@ -580,157 +723,203 @@ def render_html() -> str:
     const isCurrentReading = (record) => record?.reading_status === "current" && hasMeasuredLevel(record);
     const fmtLevel = (value) =>
       value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value)) ? `${Number(value).toFixed(2)} m` : "--";
+    const fmtTime = (value) => value ? value.slice(5, 16).replace("T", " ") : "--";
     const fmtStatus = (record) => {
       if (isCurrentReading(record)) return "近三日有效";
       if (hasMeasuredLevel(record)) return "历史读数";
       return "暂无有效水位";
     };
-    const uniqueSorted = (items) => [...new Set(items.filter(Boolean))].sort((a, b) => a.localeCompare(b, "zh-CN"));
-    const getColor = (record) => {
-      if (!isCurrentReading(record)) return "#64748b";
-      const level = Number(record?.water_level_m);
-      const alert = Number(record?.alert_level_m);
-      if (Number.isFinite(alert) && alert > 0 && Number.isFinite(level)) {
-        if (level >= alert) return "#dc2626";
-        if (level >= alert - 0.5) return "#d97706";
-      }
-      return "#2563eb";
-    };
 
     function parseCsv(text) {
-      const lines = text.trim().split(/\\r?\\n/);
-      const headers = lines.shift().split(",");
-      return lines.filter(Boolean).map((line) => {
-        const cells = line.split(",");
-        return Object.fromEntries(headers.map((header, index) => [header, cells[index] ?? ""]));
-      });
+      const rows = [];
+      let row = [];
+      let cell = "";
+      let quoted = false;
+      for (let i = 0; i < text.length; i += 1) {
+        const ch = text[i];
+        const next = text[i + 1];
+        if (quoted) {
+          if (ch === '"' && next === '"') {
+            cell += '"';
+            i += 1;
+          } else if (ch === '"') {
+            quoted = false;
+          } else {
+            cell += ch;
+          }
+        } else if (ch === '"') {
+          quoted = true;
+        } else if (ch === ",") {
+          row.push(cell);
+          cell = "";
+        } else if (ch === "\\n") {
+          row.push(cell);
+          rows.push(row);
+          row = [];
+          cell = "";
+        } else if (ch !== "\\r") {
+          cell += ch;
+        }
+      }
+      if (cell || row.length) {
+        row.push(cell);
+        rows.push(row);
+      }
+      const headers = rows.shift() || [];
+      return rows.filter((line) => line.length && line.some(Boolean)).map((line) =>
+        Object.fromEntries(headers.map((header, index) => [header, line[index] ?? ""]))
+      );
     }
 
-    async function loadData() {
-      const [stationsPayload, latestPayload, historyText, rivers] = await Promise.all([
-        fetch("./data/stations.json").then((r) => r.json()),
-        fetch("./data/latest.json").then((r) => r.json()),
-        fetch("./data/history.csv").then((r) => r.text()),
-        fetch("./data/river_lines.geojson").then((r) => r.json())
-      ]);
-      state.stations = stationsPayload.stations;
-      latestPayload.records.forEach((record) => state.latestById.set(String(record.station_id), record));
-      parseCsv(historyText).forEach((record) => {
-        const id = String(record.station_id);
-        if (!state.historyById.has(id)) state.historyById.set(id, []);
-        state.historyById.get(id).push(record);
-      });
-      for (const records of state.historyById.values()) {
-        records.sort((a, b) => new Date(a.datetime) - new Date(b.datetime));
+    function historyRecords(stationId) {
+      return (state.historyById.get(String(stationId)) || [])
+        .filter((record) => record.datetime && Number.isFinite(Number(record.water_level_m)))
+        .sort((a, b) => new Date(a.datetime) - new Date(b.datetime));
+    }
+
+    function trendInfo(stationId, latest) {
+      if (!isCurrentReading(latest)) {
+        return { ...trendStyles.unavailable, delta: null, text: fmtStatus(latest) };
       }
-      state.riversLayer = L.geoJSON(rivers, {
-        style: { color: "#0ea5e9", weight: 1.4, opacity: 0.38 },
-        interactive: false
-      }).addTo(map);
-      initializeFilters();
-      renderMarkers();
-      renderEmptyChart();
-      document.getElementById("total-count").textContent = state.stations.length;
-      document.getElementById("updated-at").textContent = new Intl.DateTimeFormat("zh-CN", {
-        month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false
-      }).format(new Date(latestPayload.generated_at));
+      const records = historyRecords(stationId);
+      if (records.length < 2) {
+        return { ...trendStyles.unavailable, delta: null, text: "暂无对比" };
+      }
+      const current = records[records.length - 1];
+      const previous = records[records.length - 2];
+      const delta = Number(current.water_level_m) - Number(previous.water_level_m);
+      if (delta >= 0.05) return { ...trendStyles.rising, delta, text: `上涨 ${delta.toFixed(2)} m` };
+      if (delta <= -0.05) return { ...trendStyles.falling, delta, text: `下降 ${Math.abs(delta).toFixed(2)} m` };
+      return { ...trendStyles.stable, delta, text: `稳定 ${delta >= 0 ? "+" : ""}${delta.toFixed(2)} m` };
     }
 
     function fillSelect(id, values, label) {
       const select = document.getElementById(id);
-      select.innerHTML = `<option value="">${label}</option>` + values.map((value) => `<option value="${value}">${value}</option>`).join("");
+      select.innerHTML = `<option value="">${escapeHtml(label)}</option>` +
+        values.map((value) => `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join("");
+    }
+
+    function selectedFilters() {
+      return {
+        basin: document.getElementById("basin-filter").value,
+        admin: document.getElementById("admin-filter").value,
+        river: document.getElementById("river-filter").value,
+        query: document.getElementById("station-filter").value.trim()
+      };
+    }
+
+    function hasActiveFilters() {
+      const filters = selectedFilters();
+      return Boolean(filters.basin || filters.admin || filters.river || filters.query);
+    }
+
+    function filteredStations() {
+      const filters = selectedFilters();
+      return state.stations.filter((item) =>
+        (!filters.basin || item.basin === filters.basin) &&
+        (!filters.admin || item.admin_region === filters.admin) &&
+        (!filters.river || item.river === filters.river) &&
+        (!filters.query || item.station.includes(filters.query) || item.river.includes(filters.query))
+      );
+    }
+
+    function updateRiverFilter() {
+      const selected = document.getElementById("river-filter").value;
+      const { basin, admin } = selectedFilters();
+      const rows = state.stations.filter((item) =>
+        (!basin || item.basin === basin) &&
+        (!admin || item.admin_region === admin)
+      );
+      const rivers = uniqueSorted(rows.map((item) => item.river));
+      fillSelect("river-filter", rivers, "全部河流");
+      if (selected && rivers.includes(selected)) document.getElementById("river-filter").value = selected;
     }
 
     function initializeFilters() {
       fillSelect("basin-filter", uniqueSorted(state.stations.map((item) => item.basin)), "全部流域");
       fillSelect("admin-filter", uniqueSorted(state.stations.map((item) => item.admin_region)), "全部行政区划");
       updateRiverFilter();
-      ["basin-filter", "admin-filter", "river-filter"].forEach((id) => {
+      ["basin-filter", "admin-filter"].forEach((id) => {
         document.getElementById(id).addEventListener("change", () => {
-          if (id !== "river-filter") updateRiverFilter();
-          renderMarkers();
+          updateRiverFilter();
+          renderMarkers(true);
         });
       });
-      document.getElementById("station-filter").addEventListener("input", renderMarkers);
+      document.getElementById("river-filter").addEventListener("change", () => renderMarkers(true));
+      document.getElementById("station-filter").addEventListener("input", () => renderMarkers(false));
+      document.getElementById("apply-filters").addEventListener("click", () => {
+        renderMarkers(true);
+        closeFilters();
+      });
+      document.getElementById("clear-filters").addEventListener("click", () => {
+        document.getElementById("basin-filter").value = "";
+        document.getElementById("admin-filter").value = "";
+        document.getElementById("station-filter").value = "";
+        updateRiverFilter();
+        document.getElementById("river-filter").value = "";
+        renderMarkers(false);
+      });
     }
 
-    function updateRiverFilter() {
-      const selected = document.getElementById("river-filter").value;
-      const basin = document.getElementById("basin-filter").value;
-      const admin = document.getElementById("admin-filter").value;
-      const rows = state.stations.filter((item) =>
-        (!basin || item.basin === basin) &&
-        (!admin || item.admin_region === admin)
-      );
-      fillSelect("river-filter", uniqueSorted(rows.map((item) => item.river)), "全部河流");
-      if (selected && uniqueSorted(rows.map((item) => item.river)).includes(selected)) {
-        document.getElementById("river-filter").value = selected;
-      }
+    function popupHtml(station, latest) {
+      const trend = trendInfo(station.station_id, latest);
+      return `<div class="popup-title">${escapeHtml(station.station)}</div>
+        <div class="popup-line">河流：${escapeHtml(station.river || "--")}</div>
+        <div class="popup-line">水位：${fmtLevel(latest?.water_level_m)}</div>
+        <div class="popup-line">趋势：<span style="color:${trend.color};font-weight:700">${escapeHtml(trend.text)}</span></div>
+        <div class="popup-line">时间：${fmtTime(latest?.datetime)}</div>`;
     }
 
-    function filteredStations() {
-      const basin = document.getElementById("basin-filter").value;
-      const admin = document.getElementById("admin-filter").value;
-      const river = document.getElementById("river-filter").value;
-      const query = document.getElementById("station-filter").value.trim();
-      return state.stations.filter((item) =>
-        (!basin || item.basin === basin) &&
-        (!admin || item.admin_region === admin) &&
-        (!river || item.river === river) &&
-        (!query || item.station.includes(query))
-      );
-    }
-
-    function renderMarkers() {
+    function renderMarkers(fitFiltered = false) {
       state.cluster.clearLayers();
       state.markersById.clear();
       const rows = filteredStations();
-      let maxRecord = null;
       rows.forEach((station) => {
         const latest = state.latestById.get(String(station.station_id));
-        const color = getColor(latest);
+        const trend = trendInfo(station.station_id, latest);
         const marker = L.circleMarker([Number(station.snap_lat), Number(station.snap_lng)], {
-          radius: 6,
-          weight: 1,
+          radius: window.innerWidth <= 760 ? 7 : 6,
+          weight: 1.4,
           color: "#ffffff",
-          fillColor: color,
-          fillOpacity: isCurrentReading(latest) ? 0.88 : 0.62
+          fillColor: trend.color,
+          fillOpacity: isCurrentReading(latest) ? 0.9 : 0.62
         });
         marker.bindPopup(popupHtml(station, latest));
         marker.on("click", () => selectStation(String(station.station_id), true));
         state.cluster.addLayer(marker);
         state.markersById.set(String(station.station_id), marker);
-        if (isCurrentReading(latest) && (!maxRecord || Number(latest.water_level_m) > Number(maxRecord.water_level_m))) maxRecord = latest;
       });
       document.getElementById("visible-count").textContent = rows.length;
-      document.getElementById("max-level").textContent = fmtLevel(maxRecord?.water_level_m);
-      if (rows.length && rows.length < state.stations.length) {
+      if (fitFiltered && hasActiveFilters() && rows.length) {
         const bounds = L.latLngBounds(rows.map((item) => [Number(item.snap_lat), Number(item.snap_lng)]));
-        map.fitBounds(bounds.pad(0.18), { maxZoom: 9 });
+        map.fitBounds(bounds.pad(0.18), { maxZoom: 10 });
       }
     }
 
-    function popupHtml(station, latest) {
-      return `<div class="popup-title">${station.station}</div>
-        <div class="popup-line">流域：${station.basin || "--"}</div>
-        <div class="popup-line">河流：${station.river || "--"}</div>
-        <div class="popup-line">行政区划：${station.admin_region || "--"}</div>
-        <div class="popup-line">状态：${fmtStatus(latest)}</div>
-        <div class="popup-line">水位：${fmtLevel(latest?.water_level_m)}</div>
-        <div class="popup-line">时间：${latest?.datetime ? latest.datetime.slice(0,16).replace("T"," ") : "--"}</div>`;
+    function openFilters() { document.getElementById("filter-panel").classList.add("open"); }
+    function closeFilters() { document.getElementById("filter-panel").classList.remove("open"); }
+    function openSheet() {
+      document.getElementById("station-sheet").classList.add("open");
+      setTimeout(() => Plotly.Plots.resize(document.getElementById("chart")), 160);
     }
+    function closeSheet() { document.getElementById("station-sheet").classList.remove("open"); }
 
     function selectStation(stationId, panToMarker = false) {
       state.selectedId = stationId;
       const station = state.stations.find((item) => String(item.station_id) === stationId);
       const latest = state.latestById.get(stationId);
+      const trend = trendInfo(stationId, latest);
       document.getElementById("station-title").textContent = station.station;
-      document.getElementById("station-meta").textContent =
-        `${station.basin} / ${station.river} / ${station.admin_region}，${fmtStatus(latest)}，最新水位 ${fmtLevel(latest?.water_level_m)}`;
+      document.getElementById("station-meta").textContent = `${station.river || station.basin || ""} · ${station.admin_region || ""}`;
+      document.getElementById("latest-level").textContent = fmtLevel(latest?.water_level_m);
+      document.getElementById("latest-time").textContent = fmtTime(latest?.datetime);
+      document.getElementById("trend-label").innerHTML =
+        `<span class="trend-chip" style="background:${trend.color}">${escapeHtml(trend.text)}</span>`;
       if (panToMarker) {
-        map.setView([Number(station.snap_lat), Number(station.snap_lng)], Math.max(map.getZoom(), 8));
+        map.setView([Number(station.snap_lat), Number(station.snap_lng)], Math.max(map.getZoom(), 9));
       }
       renderChart();
+      openSheet();
     }
 
     function rangeRecords(records) {
@@ -742,7 +931,7 @@ def render_html() -> str:
 
     function renderEmptyChart(message = "选择站点后显示趋势") {
       Plotly.newPlot("chart", [], {
-        margin: { l: 48, r: 18, t: 20, b: 42 },
+        margin: { l: 48, r: 18, t: 18, b: 40 },
         xaxis: { title: "" },
         yaxis: { title: "水位 (m)" },
         annotations: [{ text: message, showarrow: false, x: 0.5, y: 0.5, xref: "paper", yref: "paper" }]
@@ -750,7 +939,7 @@ def render_html() -> str:
     }
 
     function renderChart() {
-      const records = rangeRecords(state.historyById.get(state.selectedId) || []);
+      const records = rangeRecords(historyRecords(state.selectedId));
       const station = state.stations.find((item) => String(item.station_id) === state.selectedId);
       if (!records.length) {
         renderEmptyChart("该站点暂无历史水位数据");
@@ -760,7 +949,7 @@ def render_html() -> str:
         x: records.map((record) => record.datetime),
         y: records.map((record) => Number(record.water_level_m)),
         mode: "lines+markers",
-        line: { color: "#2563eb", width: 2.5 },
+        line: { color: "#2563eb", width: 2.4 },
         marker: { color: "#2563eb", size: 7 },
         hovertemplate: "%{x|%Y-%m-%d %H:%M}<br>水位 %{y:.2f} m<extra></extra>"
       }], {
@@ -780,6 +969,80 @@ def render_html() -> str:
       if (state.selectedId) renderChart();
     }
 
+    function distanceKm(aLat, aLng, bLat, bLng) {
+      const toRad = (value) => value * Math.PI / 180;
+      const earth = 6371;
+      const dLat = toRad(bLat - aLat);
+      const dLng = toRad(bLng - aLng);
+      const s1 = Math.sin(dLat / 2) ** 2;
+      const s2 = Math.cos(toRad(aLat)) * Math.cos(toRad(bLat)) * Math.sin(dLng / 2) ** 2;
+      return 2 * earth * Math.asin(Math.sqrt(s1 + s2));
+    }
+
+    function nearestStation(lat, lng) {
+      let nearest = null;
+      let nearestDistance = Infinity;
+      state.stations.forEach((station) => {
+        const distance = distanceKm(lat, lng, Number(station.snap_lat), Number(station.snap_lng));
+        if (distance < nearestDistance) {
+          nearest = station;
+          nearestDistance = distance;
+        }
+      });
+      return nearest ? { station: nearest, distance: nearestDistance } : null;
+    }
+
+    function locateUser(auto = false) {
+      if (!navigator.geolocation) return;
+      navigator.geolocation.getCurrentPosition((position) => {
+        const lat = position.coords.latitude;
+        const lng = position.coords.longitude;
+        const accuracy = position.coords.accuracy || 0;
+        if (state.userLayer) map.removeLayer(state.userLayer);
+        state.userLayer = L.layerGroup([
+          L.circle([lat, lng], { radius: accuracy, color: "#2563eb", weight: 1, fillOpacity: 0.08 }),
+          L.circleMarker([lat, lng], { radius: 7, color: "#fff", weight: 2, fillColor: "#2563eb", fillOpacity: 1 })
+        ]).addTo(map);
+        map.setView([lat, lng], 10);
+        const nearest = nearestStation(lat, lng);
+        if (nearest) {
+          document.getElementById("updated-at").textContent =
+            `附近站点：${nearest.station.station}，约 ${nearest.distance.toFixed(0)} km`;
+          if (!auto && nearest.distance <= 120) selectStation(String(nearest.station.station_id), false);
+        }
+      }, () => {}, { enableHighAccuracy: true, timeout: 8000, maximumAge: 600000 });
+    }
+
+    async function loadData() {
+      const [stationsPayload, latestPayload, historyText] = await Promise.all([
+        fetch("./data/stations.json").then((r) => r.json()),
+        fetch("./data/latest.json").then((r) => r.json()),
+        fetch("./data/history.csv").then((r) => r.text())
+      ]);
+      state.stations = stationsPayload.stations;
+      latestPayload.records.forEach((record) => state.latestById.set(String(record.station_id), record));
+      parseCsv(historyText).forEach((record) => {
+        const id = String(record.station_id);
+        if (!state.historyById.has(id)) state.historyById.set(id, []);
+        state.historyById.get(id).push(record);
+      });
+      for (const records of state.historyById.values()) {
+        records.sort((a, b) => new Date(a.datetime) - new Date(b.datetime));
+      }
+      initializeFilters();
+      renderMarkers(false);
+      renderEmptyChart();
+      document.getElementById("total-count").textContent = state.stations.length;
+      document.getElementById("updated-at").textContent = new Intl.DateTimeFormat("zh-CN", {
+        month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false
+      }).format(new Date(latestPayload.generated_at));
+      if (window.matchMedia("(max-width: 760px)").matches) locateUser(true);
+    }
+
+    document.getElementById("filter-toggle").addEventListener("click", openFilters);
+    document.getElementById("filter-close").addEventListener("click", closeFilters);
+    document.getElementById("sheet-close").addEventListener("click", closeSheet);
+    document.getElementById("locate-btn").addEventListener("click", () => locateUser(false));
     document.querySelectorAll("[data-days]").forEach((button) => {
       button.addEventListener("click", () => setRange(Number(button.dataset.days), button));
     });
@@ -788,6 +1051,7 @@ def render_html() -> str:
       const years = Math.max(1, Number(document.getElementById("years-input").value) || 1);
       setRange(years * 365, event.currentTarget);
     });
+    new ResizeObserver(() => Plotly.Plots.resize(document.getElementById("chart"))).observe(document.getElementById("station-sheet"));
 
     loadData().catch((error) => {
       console.error(error);
@@ -813,7 +1077,8 @@ def main() -> int:
 
     write_csv(STATIONS_CSV, stations, STATION_FIELDS)
     write_csv(HISTORY_CSV, history, HISTORY_FIELDS)
-    LATEST_JSON.write_text(json.dumps({"generated_at": fetched_at, "records": latest_rows}, ensure_ascii=False, indent=2), encoding="utf-8")
+    data_updated_at = latest_data_timestamp(latest_rows, fetched_at)
+    LATEST_JSON.write_text(json.dumps({"generated_at": data_updated_at, "records": latest_rows}, ensure_ascii=False, indent=2), encoding="utf-8")
     write_docs(stations, latest_rows, history, fetched_at)
 
     print(f"Fetched {len(latest_rows)} river records for {len(stations)} stations.")

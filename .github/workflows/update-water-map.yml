@@ -5,8 +5,8 @@ on:
     branches:
       - main
   schedule:
-    # Beijing time 09:30 and 17:30.
-    - cron: "30 1,9 * * *"
+    # Check for new national water-level data every 30 minutes.
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
