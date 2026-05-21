@@ -240,7 +240,10 @@ def merge_history(existing: list[dict[str, str]], latest_rows: list[dict[str, ob
         dt = str(row["datetime"])
         if not dt or row.get("water_level_m") is None:
             continue
-        merged[(str(row["station_id"]), dt)] = {
+        key = (str(row["station_id"]), dt)
+        if key in merged:
+            continue
+        merged[key] = {
             "station_id": row["station_id"],
             "datetime": dt,
             "date": record_date(dt),
@@ -377,6 +380,7 @@ def render_html() -> str:
     .toolbar,
     .filter-panel,
     .station-sheet,
+    .sheet-peek,
     .legend {
       background: var(--surface);
       border: 1px solid rgba(216, 225, 234, .95);
@@ -487,6 +491,29 @@ def render_html() -> str:
       border-radius: 50%;
       margin-right: 6px;
     }
+    .leaflet-control-zoom { margin-top: 82px !important; }
+    .cluster-toggle-floating {
+      position: fixed;
+      left: 64px;
+      top: calc(92px + var(--safe-top));
+      z-index: 500;
+    }
+    .cluster-toggle-button {
+      width: 42px;
+      height: 34px;
+      border: 1px solid rgba(216, 225, 234, .95);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .96);
+      box-shadow: var(--shadow);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 0;
+    }
+    .cluster-toggle-button.expanded {
+      color: var(--blue);
+      background: #eff6ff;
+    }
     .station-sheet {
       position: fixed;
       right: 12px;
@@ -496,10 +523,32 @@ def render_html() -> str:
       max-height: min(68vh, 620px);
       overflow: hidden;
       border-radius: 12px;
-      transform: translateY(calc(100% - 58px));
+      pointer-events: none;
+      transform: translateY(calc(100% + 24px));
       transition: transform .24s ease;
     }
-    .station-sheet.open { transform: translateY(0); }
+    .station-sheet.open {
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .sheet-peek {
+      position: fixed;
+      right: 12px;
+      bottom: calc(18px + var(--safe-bottom));
+      z-index: 545;
+      width: 48px;
+      height: 48px;
+      display: none;
+      place-items: center;
+      border-radius: 12px;
+      padding: 0;
+      color: var(--blue);
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .sheet-peek.show {
+      display: grid;
+    }
     .sheet-head {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -597,11 +646,22 @@ def render_html() -> str:
       .reading-card:nth-child(3) { grid-column: 1 / -1; }
       #chart { height: 260px; }
       .leaflet-control-zoom { margin-top: 72px !important; }
+      .cluster-toggle-floating {
+        left: 62px;
+        top: calc(80px + var(--safe-top));
+      }
+      .sheet-peek {
+        right: 8px;
+        bottom: calc(8px + var(--safe-bottom));
+        width: 44px;
+        height: 44px;
+      }
     }
   </style>
 </head>
 <body>
   <div id="map"></div>
+  <button type="button" class="cluster-toggle-button cluster-toggle-floating" id="cluster-toggle" aria-label="切换站点聚合">聚合</button>
   <header class="topbar">
     <div class="brand">
       <span class="brand-title">全国河道站实时水位</span>
@@ -668,6 +728,7 @@ def render_html() -> str:
       <div id="chart"></div>
     </div>
   </section>
+  <button type="button" class="sheet-peek" id="sheet-peek" aria-label="打开站点详情">⌃</button>
 
   <script>
     const state = {
@@ -677,7 +738,10 @@ def render_html() -> str:
       markersById: new Map(),
       selectedId: null,
       selectedRangeDays: 30,
+      clusterEnabled: true,
       cluster: null,
+      markerLayer: null,
+      clusterToggleButton: null,
       userLayer: null
     };
 
@@ -689,28 +753,25 @@ def render_html() -> str:
     };
 
     const map = L.map("map", { preferCanvas: true, zoomControl: true }).setView([34.5, 108.5], 5);
+    const gaodeOptions = { subdomains: "1234", maxZoom: 18, attribution: "&copy; 高德地图" };
     const baseLayers = {
-      "地图": L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      "高德地图": L.tileLayer("https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}", gaodeOptions),
+      "高德卫星": L.layerGroup([
+        L.tileLayer("https://webst0{s}.is.autonavi.com/appmaptile?style=6&x={x}&y={y}&z={z}", gaodeOptions),
+        L.tileLayer("https://webst0{s}.is.autonavi.com/appmaptile?style=8&x={x}&y={y}&z={z}", gaodeOptions)
+      ]),
+      "OpenStreetMap": L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 18,
         attribution: "&copy; OpenStreetMap contributors"
-      }),
-      "卫星": L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
-        maxZoom: 18,
-        attribution: "Tiles &copy; Esri"
-      }),
-      "浅色": L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-        maxZoom: 19,
-        attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
-      }),
-      "地形": L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
-        maxZoom: 17,
-        attribution: "&copy; OpenTopoMap"
       })
     };
-    baseLayers["地图"].addTo(map);
+    baseLayers["高德地图"].addTo(map);
     L.control.layers(baseLayers, null, { position: "bottomleft", collapsed: true }).addTo(map);
     state.cluster = L.markerClusterGroup({ showCoverageOnHover: false, maxClusterRadius: 42 });
+    state.markerLayer = L.layerGroup();
     map.addLayer(state.cluster);
+    state.clusterToggleButton = document.getElementById("cluster-toggle");
+    updateClusterToggleLabel();
 
     const escapeHtml = (value) => String(value ?? "").replace(/[&<>"']/g, (ch) => ({
       "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
@@ -870,10 +931,27 @@ def render_html() -> str:
         <div class="popup-line">时间：${fmtTime(latest?.datetime)}</div>`;
     }
 
+    function updateClusterToggleLabel() {
+      if (!state.clusterToggleButton) return;
+      state.clusterToggleButton.textContent = state.clusterEnabled ? "聚合" : "展开";
+      state.clusterToggleButton.classList.toggle("expanded", !state.clusterEnabled);
+    }
+
+    function setClusterEnabled(enabled) {
+      state.clusterEnabled = enabled;
+      if (map.hasLayer(state.cluster)) map.removeLayer(state.cluster);
+      if (map.hasLayer(state.markerLayer)) map.removeLayer(state.markerLayer);
+      map.addLayer(state.clusterEnabled ? state.cluster : state.markerLayer);
+      updateClusterToggleLabel();
+      renderMarkers(false);
+    }
+
     function renderMarkers(fitFiltered = false) {
       state.cluster.clearLayers();
+      state.markerLayer.clearLayers();
       state.markersById.clear();
       const rows = filteredStations();
+      const targetLayer = state.clusterEnabled ? state.cluster : state.markerLayer;
       rows.forEach((station) => {
         const latest = state.latestById.get(String(station.station_id));
         const trend = trendInfo(station.station_id, latest);
@@ -886,7 +964,7 @@ def render_html() -> str:
         });
         marker.bindPopup(popupHtml(station, latest));
         marker.on("click", () => selectStation(String(station.station_id), true));
-        state.cluster.addLayer(marker);
+        targetLayer.addLayer(marker);
         state.markersById.set(String(station.station_id), marker);
       });
       document.getElementById("visible-count").textContent = rows.length;
@@ -900,9 +978,13 @@ def render_html() -> str:
     function closeFilters() { document.getElementById("filter-panel").classList.remove("open"); }
     function openSheet() {
       document.getElementById("station-sheet").classList.add("open");
+      document.getElementById("sheet-peek").classList.remove("show");
       setTimeout(() => Plotly.Plots.resize(document.getElementById("chart")), 160);
     }
-    function closeSheet() { document.getElementById("station-sheet").classList.remove("open"); }
+    function closeSheet() {
+      document.getElementById("station-sheet").classList.remove("open");
+      document.getElementById("sheet-peek").classList.toggle("show", Boolean(state.selectedId));
+    }
 
     function selectStation(stationId, panToMarker = false) {
       state.selectedId = stationId;
@@ -1042,7 +1124,9 @@ def render_html() -> str:
     document.getElementById("filter-toggle").addEventListener("click", openFilters);
     document.getElementById("filter-close").addEventListener("click", closeFilters);
     document.getElementById("sheet-close").addEventListener("click", closeSheet);
+    document.getElementById("sheet-peek").addEventListener("click", openSheet);
     document.getElementById("locate-btn").addEventListener("click", () => locateUser(false));
+    document.getElementById("cluster-toggle").addEventListener("click", () => setClusterEnabled(!state.clusterEnabled));
     document.querySelectorAll("[data-days]").forEach((button) => {
       button.addEventListener("click", () => setRange(Number(button.dataset.days), button));
     });
