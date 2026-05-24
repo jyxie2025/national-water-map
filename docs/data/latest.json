@@ -6439,12 +6439,12 @@
     },
     {
       "station_id": "103",
-      "datetime": "2026-05-23T08:00:00+08:00",
+      "datetime": "2026-05-24T08:00:00+08:00",
       "station": "通江口",
       "basin": "辽河",
       "river": "辽河",
       "admin_region": "辽宁",
-      "water_level_m": 69.19,
+      "water_level_m": 69.12,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
