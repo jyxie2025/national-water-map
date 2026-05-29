@@ -6202,7 +6202,7 @@
       "basin": "辽河",
       "river": "清河",
       "admin_region": "辽宁",
-      "water_level_m": 87.2,
+      "water_level_m": 87.3,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -10932,7 +10932,7 @@
       "basin": "长江",
       "river": "金沙江",
       "admin_region": "四川",
-      "water_level_m": 998.84,
+      "water_level_m": 998.83,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -15107,7 +15107,7 @@
     },
     {
       "station_id": "365",
-      "datetime": "2026-05-28T08:00:00+08:00",
+      "datetime": "2026-05-29T08:00:00+08:00",
       "station": "总干渠水文站",
       "basin": "黄河",
       "river": "黄河",
@@ -15409,7 +15409,7 @@
       "basin": "黑龙江",
       "river": "松花江",
       "admin_region": "吉林",
-      "water_level_m": 128.93,
+      "water_level_m": 128.83,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
