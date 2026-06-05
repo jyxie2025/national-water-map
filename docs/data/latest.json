@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 21.86,
+      "water_level_m": 21.87,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5377,7 +5377,7 @@
       "basin": "珠江",
       "river": "荔浦河",
       "admin_region": "广西",
-      "water_level_m": 140.0,
+      "water_level_m": 140.62,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -15107,12 +15107,12 @@
     },
     {
       "station_id": "365",
-      "datetime": "2026-06-04T08:00:00+08:00",
+      "datetime": "2026-06-05T08:00:00+08:00",
       "station": "总干渠水文站",
       "basin": "黄河",
       "river": "黄河",
       "admin_region": "内蒙古",
-      "water_level_m": 1052.26,
+      "water_level_m": 1052.28,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
