@@ -2497,7 +2497,7 @@
       "admin_region": "河北",
       "water_level_m": 155.92,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "234",
