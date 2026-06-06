@@ -5592,12 +5592,12 @@
     },
     {
       "station_id": "1374",
-      "datetime": "2026-06-05T08:00:00+08:00",
+      "datetime": "2026-06-06T08:00:00+08:00",
       "station": "石灰厂",
       "basin": "珠江",
       "river": "都柳江",
       "admin_region": "贵州",
-      "water_level_m": 241.5,
+      "water_level_m": 240.74,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5718,7 +5718,7 @@
       "basin": "珠江",
       "river": "黔江",
       "admin_region": "广西",
-      "water_level_m": 49.25,
+      "water_level_m": 49.46,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
