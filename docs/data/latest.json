@@ -3817,7 +3817,7 @@
       "admin_region": "河南",
       "water_level_m": 56.24,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "674",
@@ -6402,7 +6402,7 @@
       "admin_region": "辽宁",
       "water_level_m": 46.09,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "170",
@@ -13420,7 +13420,7 @@
       "admin_region": "甘肃",
       "water_level_m": 1561.95,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "390",
