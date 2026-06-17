@@ -9,7 +9,7 @@
       "basin": "万泉河",
       "river": "万泉河",
       "admin_region": "海南",
-      "water_level_m": 1.07,
+      "water_level_m": 1.1,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -323,12 +323,12 @@
     },
     {
       "station_id": "1356",
-      "datetime": "2026-06-16T08:00:00+08:00",
+      "datetime": "2026-06-17T08:00:00+08:00",
       "station": "定安（三）",
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.4,
+      "water_level_m": 8.3,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -350,7 +350,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.52,
+      "water_level_m": 8.5,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 22.26,
+      "water_level_m": 22.3,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -999,7 +999,7 @@
       "basin": "昌化江",
       "river": "昌化江",
       "admin_region": "海南",
-      "water_level_m": 14.67,
+      "water_level_m": 14.7,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12808,7 +12808,7 @@
     },
     {
       "station_id": "1360",
-      "datetime": "2026-06-16T08:00:00+08:00",
+      "datetime": "2026-06-17T08:00:00+08:00",
       "station": "陵水",
       "basin": "陵水河",
       "river": "陵水河",
@@ -15107,12 +15107,12 @@
     },
     {
       "station_id": "365",
-      "datetime": "2026-06-16T08:00:00+08:00",
+      "datetime": "2026-06-17T08:00:00+08:00",
       "station": "总干渠水文站",
       "basin": "黄河",
       "river": "黄河",
       "admin_region": "内蒙古",
-      "water_level_m": 1053.1,
+      "water_level_m": 1053.49,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -15409,7 +15409,7 @@
       "basin": "黑龙江",
       "river": "松花江",
       "admin_region": "吉林",
-      "water_level_m": 129.78,
+      "water_level_m": 129.8,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
