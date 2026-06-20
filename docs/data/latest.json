@@ -411,12 +411,12 @@
     },
     {
       "station_id": "18",
-      "datetime": "2026-06-19T08:00:00+08:00",
+      "datetime": "2026-06-20T08:00:00+08:00",
       "station": "博斯腾湖",
       "basin": "塔里木河",
       "river": "博斯腾湖",
       "admin_region": "新疆",
-      "water_level_m": 1046.27,
+      "water_level_m": 1046.22,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
