@@ -9827,12 +9827,12 @@
     },
     {
       "station_id": "711",
-      "datetime": "2026-06-21T08:00:00+08:00",
+      "datetime": "2026-06-22T08:00:00+08:00",
       "station": "二郎坝",
       "basin": "长江",
       "river": "牛渡河",
       "admin_region": "贵州",
-      "water_level_m": 393.98,
+      "water_level_m": 394.5,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
