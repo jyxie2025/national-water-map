@@ -12329,7 +12329,7 @@
       "basin": "长江流域太湖区",
       "river": "西苕溪",
       "admin_region": "浙江",
-      "water_level_m": 2.84,
+      "water_level_m": 2.09,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -14067,7 +14067,7 @@
       "basin": "黄河",
       "river": "清水河",
       "admin_region": "宁夏",
-      "water_level_m": 1418.44,
+      "water_level_m": 1418.43,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -15409,7 +15409,7 @@
       "basin": "黑龙江",
       "river": "松花江",
       "admin_region": "吉林",
-      "water_level_m": 130.85,
+      "water_level_m": 130.88,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
