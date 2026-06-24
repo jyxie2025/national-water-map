@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 21.97,
+      "water_level_m": 21.98,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -2215,12 +2215,12 @@
     },
     {
       "station_id": "189",
-      "datetime": "2026-06-23T08:00:00+08:00",
+      "datetime": "2026-06-24T08:00:00+08:00",
       "station": "罗庄子",
       "basin": "海河",
       "river": "泃河",
       "admin_region": "天津",
-      "water_level_m": 15.93,
+      "water_level_m": 16.92,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -2292,12 +2292,12 @@
     },
     {
       "station_id": "191",
-      "datetime": "2026-06-23T08:00:00+08:00",
+      "datetime": "2026-06-24T08:00:00+08:00",
       "station": "淋河桥",
       "basin": "海河",
       "river": "淋河",
       "admin_region": "天津",
-      "water_level_m": 22.07,
+      "water_level_m": 22.06,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -2732,23 +2732,23 @@
     },
     {
       "station_id": "259",
-      "datetime": "2026-06-23T08:00:00+08:00",
+      "datetime": "2026-06-24T08:00:00+08:00",
       "station": "九王庄闸上",
       "basin": "海河",
       "river": "蓟运河",
       "admin_region": "天津",
-      "water_level_m": 3.32,
+      "water_level_m": 2.94,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
     {
       "station_id": "188",
-      "datetime": "2026-06-23T08:00:00+08:00",
+      "datetime": "2026-06-24T08:00:00+08:00",
       "station": "张头窝闸下",
       "basin": "海河",
       "river": "蓟运河",
       "admin_region": "天津",
-      "water_level_m": 1.91,
+      "water_level_m": 1.83,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -2864,7 +2864,7 @@
     },
     {
       "station_id": "192",
-      "datetime": "2026-06-23T08:00:00+08:00",
+      "datetime": "2026-06-24T08:00:00+08:00",
       "station": "前毛庄",
       "basin": "海河",
       "river": "黎河",
@@ -15107,12 +15107,12 @@
     },
     {
       "station_id": "365",
-      "datetime": "2026-06-23T08:00:00+08:00",
+      "datetime": "2026-06-24T08:00:00+08:00",
       "station": "总干渠水文站",
       "basin": "黄河",
       "river": "黄河",
       "admin_region": "内蒙古",
-      "water_level_m": 1053.94,
+      "water_level_m": 1053.92,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
