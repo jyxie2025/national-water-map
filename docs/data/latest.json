@@ -7544,7 +7544,7 @@
       "basin": "长江",
       "river": "大渡河",
       "admin_region": "四川",
-      "water_level_m": 1852.35,
+      "water_level_m": 1852.52,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -15107,12 +15107,12 @@
     },
     {
       "station_id": "365",
-      "datetime": "2026-06-24T08:00:00+08:00",
+      "datetime": "2026-06-25T08:00:00+08:00",
       "station": "总干渠水文站",
       "basin": "黄河",
       "river": "黄河",
       "admin_region": "内蒙古",
-      "water_level_m": 1053.92,
+      "water_level_m": 1053.86,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
