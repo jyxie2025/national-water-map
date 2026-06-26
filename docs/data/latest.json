@@ -8947,12 +8947,12 @@
     },
     {
       "station_id": "889",
-      "datetime": "2026-06-25T08:00:00+08:00",
+      "datetime": "2026-06-26T08:00:00+08:00",
       "station": "双江口",
       "basin": "长江",
       "river": "浏渭河",
       "admin_region": "湖南",
-      "water_level_m": 20.56,
+      "water_level_m": 20.55,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
