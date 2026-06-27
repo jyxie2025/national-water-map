@@ -9755,8 +9755,8 @@
       "basin": "长江",
       "river": "濂水",
       "admin_region": "江西",
-      "water_level_m": 195.18,
-      "alert_level_m": 0.0,
+      "water_level_m": 229.5,
+      "alert_level_m": 32.0,
       "reading_status": "current"
     },
     {
