@@ -1038,7 +1038,7 @@
     },
     {
       "station_id": "1224",
-      "datetime": "2026-06-30T08:00:00+08:00",
+      "datetime": "2026-07-01T08:00:00+08:00",
       "station": "湖头",
       "basin": "晋江",
       "river": "晋江西溪",
@@ -1659,7 +1659,7 @@
       "basin": "海河",
       "river": "十里河",
       "admin_region": "山西",
-      "water_level_m": 1075.11,
+      "water_level_m": 1075.13,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5938,7 +5938,7 @@
       "basin": "辽河",
       "river": "大凌河",
       "admin_region": "辽宁",
-      "water_level_m": 164.2,
+      "water_level_m": 165.2,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -15107,12 +15107,12 @@
     },
     {
       "station_id": "365",
-      "datetime": "2026-06-30T08:00:00+08:00",
+      "datetime": "2026-07-01T08:00:00+08:00",
       "station": "总干渠水文站",
       "basin": "黄河",
       "river": "黄河",
       "admin_region": "内蒙古",
-      "water_level_m": 1053.9,
+      "water_level_m": 1053.57,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
