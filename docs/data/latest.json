@@ -328,7 +328,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.27,
+      "water_level_m": 8.3,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -350,7 +350,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 7.96,
+      "water_level_m": 8.0,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 23.11,
+      "water_level_m": 23.1,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -999,7 +999,7 @@
       "basin": "昌化江",
       "river": "昌化江",
       "admin_region": "海南",
-      "water_level_m": 16.17,
+      "water_level_m": 16.2,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5773,7 +5773,7 @@
       "basin": "粤西沿海诸河",
       "river": "九洲江",
       "admin_region": "广东",
-      "water_level_m": 3.68,
+      "water_level_m": 3.69,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12813,7 +12813,7 @@
       "basin": "陵水河",
       "river": "陵水河",
       "admin_region": "海南",
-      "water_level_m": 4.95,
+      "water_level_m": 5.0,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -15107,12 +15107,12 @@
     },
     {
       "station_id": "365",
-      "datetime": "2026-07-03T08:00:00+08:00",
+      "datetime": "2026-07-04T08:00:00+08:00",
       "station": "总干渠水文站",
       "basin": "黄河",
       "river": "黄河",
       "admin_region": "内蒙古",
-      "water_level_m": 1053.02,
+      "water_level_m": 1052.85,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
