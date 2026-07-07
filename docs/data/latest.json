@@ -5658,12 +5658,12 @@
     },
     {
       "station_id": "1274",
-      "datetime": "2026-07-05T08:00:00+08:00",
+      "datetime": "2026-07-07T08:00:00+08:00",
       "station": "中里",
       "basin": "珠江",
       "river": "马来河",
       "admin_region": "广西",
-      "water_level_m": 109.26,
+      "water_level_m": 111.79,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
