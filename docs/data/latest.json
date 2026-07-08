@@ -6389,7 +6389,7 @@
       "basin": "辽河",
       "river": "辽河",
       "admin_region": "辽宁",
-      "water_level_m": 22.84,
+      "water_level_m": 23.84,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -9827,12 +9827,12 @@
     },
     {
       "station_id": "711",
-      "datetime": "2026-07-07T08:00:00+08:00",
+      "datetime": "2026-07-08T08:00:00+08:00",
       "station": "二郎坝",
       "basin": "长江",
       "river": "牛渡河",
       "admin_region": "贵州",
-      "water_level_m": 394.68,
+      "water_level_m": 395.79,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -11922,7 +11922,7 @@
       "basin": "长江流域",
       "river": "崇仁水",
       "admin_region": "江西",
-      "water_level_m": 49.5,
+      "water_level_m": 49.37,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
