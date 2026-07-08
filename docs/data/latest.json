@@ -9,7 +9,7 @@
       "basin": "万泉河",
       "river": "万泉河",
       "admin_region": "海南",
-      "water_level_m": 1.51,
+      "water_level_m": 1.5,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -350,7 +350,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.52,
+      "water_level_m": 8.5,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 22.29,
+      "water_level_m": 22.3,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -1516,7 +1516,7 @@
       "basin": "浙闽台河流",
       "river": "衢江",
       "admin_region": "浙江",
-      "water_level_m": 59.52,
+      "water_level_m": 59.53,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5773,7 +5773,7 @@
       "basin": "粤西沿海诸河",
       "river": "九洲江",
       "admin_region": "广东",
-      "water_level_m": 3.61,
+      "water_level_m": 3.55,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
