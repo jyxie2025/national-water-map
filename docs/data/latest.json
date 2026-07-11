@@ -2715,7 +2715,7 @@
       "basin": "海河",
       "river": "老牛河",
       "admin_region": "河北",
-      "water_level_m": 266.82,
+      "water_level_m": 265.82,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -13935,7 +13935,7 @@
       "basin": "黄河",
       "river": "洮河",
       "admin_region": "甘肃",
-      "water_level_m": 2822.82,
+      "water_level_m": 2822.72,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
