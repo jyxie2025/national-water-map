@@ -6752,7 +6752,7 @@
       "basin": "长江",
       "river": "中河-后河-州河",
       "admin_region": "四川",
-      "water_level_m": 341.11,
+      "water_level_m": 341.1,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -7192,7 +7192,7 @@
       "basin": "长江",
       "river": "南河",
       "admin_region": "四川",
-      "water_level_m": 494.97,
+      "water_level_m": 495.51,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
