@@ -1252,8 +1252,8 @@
       "basin": "松花江吉林段",
       "river": "伊通河",
       "admin_region": "吉林",
-      "water_level_m": 165.78,
-      "alert_level_m": 0.31,
+      "water_level_m": 165.9,
+      "alert_level_m": 0.43,
       "reading_status": "current"
     },
     {
@@ -5784,7 +5784,7 @@
       "basin": "绕阳河",
       "river": "东沙河",
       "admin_region": "辽宁",
-      "water_level_m": 18.18,
+      "water_level_m": 19.57,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -6037,7 +6037,7 @@
       "basin": "辽河",
       "river": "太子河(南支)",
       "admin_region": "辽宁",
-      "water_level_m": 262.85,
+      "water_level_m": 262.56,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
