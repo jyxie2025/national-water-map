@@ -9,7 +9,7 @@
       "basin": "万泉河",
       "river": "万泉河",
       "admin_region": "海南",
-      "water_level_m": 1.71,
+      "water_level_m": 1.7,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -328,7 +328,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.43,
+      "water_level_m": 8.4,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -350,7 +350,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.59,
+      "water_level_m": 8.6,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 22.48,
+      "water_level_m": 22.5,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -999,7 +999,7 @@
       "basin": "昌化江",
       "river": "昌化江",
       "admin_region": "海南",
-      "water_level_m": 16.27,
+      "water_level_m": 16.3,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -6147,7 +6147,7 @@
       "basin": "辽河",
       "river": "浑河",
       "admin_region": "辽宁",
-      "water_level_m": 75.33,
+      "water_level_m": 75.45,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12813,7 +12813,7 @@
       "basin": "陵水河",
       "river": "陵水河",
       "admin_region": "海南",
-      "water_level_m": 1.85,
+      "water_level_m": 1.9,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -13644,12 +13644,12 @@
     },
     {
       "station_id": "414",
-      "datetime": "2026-07-13T08:00:00+08:00",
+      "datetime": "2026-07-14T08:00:00+08:00",
       "station": "汾河二坝（河道二）",
       "basin": "黄河",
       "river": "汾河",
       "admin_region": "山西",
-      "water_level_m": 758.06,
+      "water_level_m": 758.07,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -13682,7 +13682,7 @@
       "basin": "黄河",
       "river": "汾河",
       "admin_region": "山西",
-      "water_level_m": 1193.81,
+      "water_level_m": 1193.82,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -15107,12 +15107,12 @@
     },
     {
       "station_id": "365",
-      "datetime": "2026-07-13T08:00:00+08:00",
+      "datetime": "2026-07-14T08:00:00+08:00",
       "station": "总干渠水文站",
       "basin": "黄河",
       "river": "黄河",
       "admin_region": "内蒙古",
-      "water_level_m": 1053.33,
+      "water_level_m": 1053.59,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
