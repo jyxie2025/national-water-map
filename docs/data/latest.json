@@ -11631,12 +11631,12 @@
     },
     {
       "station_id": "914",
-      "datetime": "2026-07-14T08:00:00+08:00",
+      "datetime": "2026-07-15T08:00:00+08:00",
       "station": "下司(二)",
       "basin": "长江",
       "river": "马尾河",
       "admin_region": "贵州",
-      "water_level_m": 603.06,
+      "water_level_m": 603.07,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
