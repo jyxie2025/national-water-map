@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T08:00:00+08:00",
+  "generated_at": "2026-07-18T08:00:00+08:00",
   "records": [
     {
       "station_id": "1405",
@@ -1002,11 +1002,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 60.54,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 60.55,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "214",
@@ -1021,11 +1021,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 17.64,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 17.63,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "153",
@@ -1040,11 +1040,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 141.66,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 141.85,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "154",
@@ -1059,11 +1059,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 47.02,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 47.0,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "1169",
@@ -2655,11 +2655,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
+      "datetime": "2026-07-18T08:00:00+08:00",
       "water_level_m": 1246.93,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "208",
@@ -2674,11 +2674,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 838.27,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 838.17,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "252",
@@ -2769,11 +2769,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 529.25,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 529.23,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "348",
@@ -2807,11 +2807,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 205.59,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 205.63,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "196",
@@ -2845,11 +2845,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 1.21,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 1.07,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "205",
@@ -2902,11 +2902,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 16.37,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 16.36,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "215",
@@ -2940,11 +2940,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 781.8,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 781.77,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "358",
@@ -3073,11 +3073,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 158.31,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 158.29,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "228",
@@ -3092,11 +3092,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
+      "datetime": "2026-07-18T08:00:00+08:00",
       "water_level_m": 406.32,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "264",
@@ -3206,11 +3206,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 2.53,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 2.42,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "238",
@@ -3244,11 +3244,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 6.67,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 6.65,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "270",
@@ -3396,11 +3396,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
+      "datetime": "2026-07-18T08:00:00+08:00",
       "water_level_m": 513.56,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "237",
@@ -3453,11 +3453,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 574.76,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 574.74,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "177",
@@ -3472,11 +3472,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 421.31,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 421.27,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "257",
@@ -3567,11 +3567,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 810.36,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 810.32,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "201",
@@ -3624,11 +3624,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 323.88,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 324.69,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "271",
@@ -3681,11 +3681,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
+      "datetime": "2026-07-18T08:00:00+08:00",
       "water_level_m": 25.75,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "263",
@@ -3738,11 +3738,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
+      "datetime": "2026-07-18T08:00:00+08:00",
       "water_level_m": 60.35,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "225",
@@ -3757,11 +3757,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
+      "datetime": "2026-07-18T08:00:00+08:00",
       "water_level_m": 200.18,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "243",
@@ -3795,11 +3795,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 249.02,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 249.01,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "190",
@@ -3871,11 +3871,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 55.14,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 55.18,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "277",
@@ -3985,11 +3985,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 11.76,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 11.72,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "211",
@@ -4061,11 +4061,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 555.3,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 555.51,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "282",
@@ -4137,11 +4137,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 366.92,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 366.98,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "216",
@@ -4156,11 +4156,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 23.81,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 23.71,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "167",
@@ -4175,11 +4175,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 776.1,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 776.26,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "251",
@@ -4194,11 +4194,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 31.38,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 31.24,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "248",
@@ -4232,11 +4232,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 261.9,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 261.91,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "250",
@@ -4365,11 +4365,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 145.51,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 145.52,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "242",
@@ -4384,11 +4384,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 174.45,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 174.38,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "185",
@@ -4403,11 +4403,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 212.6,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 212.7,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "184",
@@ -4422,11 +4422,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 621.22,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 621.1,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "218",
@@ -4479,11 +4479,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 22.81,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 22.59,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "223",
@@ -4498,11 +4498,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 7.41,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 7.39,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "222",
@@ -4536,11 +4536,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 221.28,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 221.12,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "178",
@@ -4555,11 +4555,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 294.82,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 294.78,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "235",
@@ -4612,11 +4612,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 20.15,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 20.05,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "183",
@@ -4650,11 +4650,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 182.3,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 182.26,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "279",
@@ -4688,11 +4688,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 266.09,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 266.02,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "236",
@@ -4707,11 +4707,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 266.57,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 266.55,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "259",
@@ -4764,11 +4764,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 544.38,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 544.57,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "220",
@@ -4783,11 +4783,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 3.57,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 3.53,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "219",
@@ -4821,11 +4821,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 308.54,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 308.56,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "193",
@@ -4840,11 +4840,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 80.53,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 80.52,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "230",
@@ -4859,11 +4859,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
+      "datetime": "2026-07-18T08:00:00+08:00",
       "water_level_m": 150.13,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "195",
@@ -4897,11 +4897,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 165.24,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 165.16,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "255",
@@ -4973,11 +4973,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 9.93,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 9.91,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "171",
@@ -5391,11 +5391,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 34.21,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 34.31,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "574",
@@ -5543,11 +5543,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 34.64,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 34.7,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "626",
@@ -5581,11 +5581,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 22.3,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 22.53,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "582",
@@ -5733,11 +5733,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 32.35,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 32.41,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "625",
@@ -5752,11 +5752,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 32.25,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 32.32,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "677",
@@ -6303,11 +6303,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 37.6,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 37.11,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "596",
@@ -6550,11 +6550,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 34.88,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 34.83,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "532",
@@ -7082,11 +7082,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 34.31,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 34.44,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "550",
@@ -7652,11 +7652,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 24.02,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 23.86,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "158",
@@ -7690,11 +7690,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 46.31,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 46.22,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "155",
@@ -7709,11 +7709,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 69.85,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 69.79,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "156",
@@ -7728,11 +7728,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 17.52,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 17.51,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "3",
@@ -9989,11 +9989,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 18.47,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 18.28,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "130",
@@ -10008,11 +10008,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 18.57,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 18.55,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "1",
@@ -10103,11 +10103,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 212.57,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 212.38,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "113",
@@ -10122,11 +10122,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 87.78,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 87.1,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "114",
@@ -10141,11 +10141,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 73.43,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 73.16,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "145",
@@ -10179,11 +10179,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 35.0,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 34.93,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "124",
@@ -10198,11 +10198,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 206.86,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 206.65,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "163",
@@ -10217,11 +10217,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 21.25,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 20.97,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "161",
@@ -10236,11 +10236,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 7.65,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 7.6,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "148",
@@ -10255,11 +10255,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 165.47,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 165.02,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "151",
@@ -10274,11 +10274,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 351.6,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 351.55,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "162",
@@ -10293,11 +10293,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 6.28,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 5.81,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "159",
@@ -10388,11 +10388,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 105.37,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 105.32,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "198",
@@ -10407,11 +10407,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
+      "datetime": "2026-07-18T08:00:00+08:00",
       "water_level_m": 22.41,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "143",
@@ -10426,11 +10426,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 262.79,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 262.62,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "119",
@@ -10483,11 +10483,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 9.25,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 9.14,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "112",
@@ -10502,11 +10502,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 105.07,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 104.82,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "123",
@@ -10521,11 +10521,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 81.07,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 81.01,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "122",
@@ -10540,11 +10540,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
+      "datetime": "2026-07-18T08:00:00+08:00",
       "water_level_m": 192.34,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "115",
@@ -10616,11 +10616,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 74.98,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 75.02,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "194",
@@ -10635,11 +10635,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 36.79,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 36.82,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "134",
@@ -10692,11 +10692,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 147.26,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 147.06,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "117",
@@ -10711,11 +10711,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 88.42,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 88.29,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "160",
@@ -10749,11 +10749,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 51.8,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 50.74,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "152",
@@ -10768,11 +10768,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 138.45,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 138.4,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "166",
@@ -10787,11 +10787,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
+      "datetime": "2026-07-18T08:00:00+08:00",
       "water_level_m": 82.64,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "118",
@@ -10825,11 +10825,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 177.22,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 177.09,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "120",
@@ -10844,11 +10844,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 35.97,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 35.72,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "144",
@@ -10863,11 +10863,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 125.42,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 125.21,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "127",
@@ -10882,11 +10882,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 69.9,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 69.88,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "128",
@@ -10901,11 +10901,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 25.05,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 24.97,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "126",
@@ -10920,11 +10920,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 109.55,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 109.53,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "135",
@@ -10939,11 +10939,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 147.6,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 147.3,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "164",
@@ -10958,11 +10958,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 86.22,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 86.17,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "138",
@@ -10977,11 +10977,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 26.62,
-      "alert_level_m": 1.12,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 25.91,
+      "alert_level_m": 0.41,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "109",
@@ -11015,11 +11015,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 11.43,
-      "alert_level_m": 0.13,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 11.9,
+      "alert_level_m": 0.6,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "107",
@@ -11034,11 +11034,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 27.7,
-      "alert_level_m": 0.65,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 27.39,
+      "alert_level_m": 0.34,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "105",
@@ -11091,11 +11091,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
+      "datetime": "2026-07-18T08:00:00+08:00",
       "water_level_m": 18.46,
       "alert_level_m": 0.44,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "182",
@@ -11148,11 +11148,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "是",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 59.88,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 59.54,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "106",
@@ -11167,11 +11167,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 39.55,
-      "alert_level_m": 0.68,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 39.42,
+      "alert_level_m": 0.55,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "100",
@@ -12421,11 +12421,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 496.02,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 494.62,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "1133",
@@ -13580,11 +13580,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 1541.83,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 1541.97,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "983",
@@ -13637,11 +13637,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 2450.63,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 2450.58,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "774",
@@ -13789,11 +13789,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 286.48,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 286.49,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "739",
@@ -13998,11 +13998,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 527.44,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 526.18,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "875",
@@ -17133,11 +17133,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 751.1,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 749.84,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "1039",
@@ -17684,11 +17684,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 260.49,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 261.07,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "919",
@@ -18140,11 +18140,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 760.72,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 760.9,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "1135",
@@ -18634,11 +18634,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 301.92,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 301.94,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "880",
@@ -19812,11 +19812,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 459.68,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 459.69,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "975",
@@ -19907,11 +19907,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 2566.68,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 2566.07,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "795",
@@ -24828,11 +24828,11 @@
       "snap_source": "official_coordinate",
       "station_type": "river",
       "important_section": "否",
-      "datetime": "2026-07-17T08:00:00+08:00",
-      "water_level_m": 179.13,
+      "datetime": "2026-07-18T08:00:00+08:00",
+      "water_level_m": 179.2,
       "alert_level_m": 0.0,
       "reading_status": "current",
-      "source_updated_at": "2026-07-17 15:40:15"
+      "source_updated_at": "2026-07-18 08:00:54"
     },
     {
       "station_id": "474",
