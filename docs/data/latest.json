@@ -323,12 +323,12 @@
     },
     {
       "station_id": "1356",
-      "datetime": "2026-07-19T08:00:00+08:00",
+      "datetime": "2026-07-20T08:00:00+08:00",
       "station": "定安（三）",
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.4,
+      "water_level_m": 8.52,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 22.13,
+      "water_level_m": 22.14,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12808,12 +12808,12 @@
     },
     {
       "station_id": "1360",
-      "datetime": "2026-07-19T08:00:00+08:00",
+      "datetime": "2026-07-20T08:00:00+08:00",
       "station": "陵水",
       "basin": "陵水河",
       "river": "陵水河",
       "admin_region": "海南",
-      "water_level_m": 2.1,
+      "water_level_m": 2.09,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
