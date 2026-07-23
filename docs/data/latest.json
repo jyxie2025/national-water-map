@@ -10030,7 +10030,7 @@
       "basin": "长江",
       "river": "皖水",
       "admin_region": "安徽",
-      "water_level_m": 366.26,
+      "water_level_m": 366.27,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -10102,12 +10102,12 @@
     },
     {
       "station_id": "767",
-      "datetime": "2026-07-22T08:00:00+08:00",
+      "datetime": "2026-07-23T08:00:00+08:00",
       "station": "涌泉",
       "basin": "长江",
       "river": "索溪-资水河（阳化河）",
       "admin_region": "四川",
-      "water_level_m": 384.98,
+      "water_level_m": 384.93,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
