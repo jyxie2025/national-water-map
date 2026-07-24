@@ -3146,7 +3146,7 @@
       "admin_region": "河南",
       "water_level_m": 31.34,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "666",
@@ -3201,7 +3201,7 @@
       "admin_region": "山东",
       "water_level_m": 8.7,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "621",
@@ -3300,7 +3300,7 @@
       "admin_region": "河南",
       "water_level_m": 60.85,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "705",
@@ -3839,7 +3839,7 @@
       "admin_region": "河南",
       "water_level_m": 20.94,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "528",
@@ -4158,7 +4158,7 @@
       "admin_region": "河南",
       "water_level_m": 71.47,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "620",
@@ -4422,7 +4422,7 @@
       "admin_region": "河南",
       "water_level_m": 36.19,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "506",
