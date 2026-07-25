@@ -10467,7 +10467,7 @@
       "datetime": "2026-07-22T08:00:00+08:00",
       "water_level_m": 453.22,
       "alert_level_m": 0.0,
-      "reading_status": "current",
+      "reading_status": "stale",
       "source_updated_at": "2026-07-22 15:40:21"
     },
     {
@@ -11322,7 +11322,7 @@
       "datetime": "2026-07-22T08:00:00+08:00",
       "water_level_m": 451.9,
       "alert_level_m": 0.0,
-      "reading_status": "current",
+      "reading_status": "stale",
       "source_updated_at": "2026-07-22 15:40:21"
     },
     {
@@ -24052,7 +24052,7 @@
       "datetime": "2026-07-22T08:00:00+08:00",
       "water_level_m": 498.75,
       "alert_level_m": 0.0,
-      "reading_status": "current",
+      "reading_status": "stale",
       "source_updated_at": "2026-07-22 15:40:21"
     },
     {

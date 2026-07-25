@@ -6061,7 +6061,7 @@
       "admin_region": "内蒙古",
       "water_level_m": 453.22,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "165",
@@ -6556,7 +6556,7 @@
       "admin_region": "内蒙古",
       "water_level_m": 451.9,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "92",
@@ -13926,7 +13926,7 @@
       "admin_region": "山西",
       "water_level_m": 498.75,
       "alert_level_m": 0.0,
-      "reading_status": "current"
+      "reading_status": "stale"
     },
     {
       "station_id": "339",
