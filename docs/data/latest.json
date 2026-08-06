@@ -9,7 +9,7 @@
       "basin": "万泉河",
       "river": "万泉河",
       "admin_region": "海南",
-      "water_level_m": 1.74,
+      "water_level_m": 1.7,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 23.92,
+      "water_level_m": 23.9,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -999,7 +999,7 @@
       "basin": "昌化江",
       "river": "昌化江",
       "admin_region": "海南",
-      "water_level_m": 15.36,
+      "water_level_m": 15.4,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -1659,7 +1659,7 @@
       "basin": "海河",
       "river": "十里河",
       "admin_region": "山西",
-      "water_level_m": 1075.15,
+      "water_level_m": 1075.12,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -15107,12 +15107,12 @@
     },
     {
       "station_id": "365",
-      "datetime": "2026-08-04T08:00:00+08:00",
+      "datetime": "2026-08-06T08:00:00+08:00",
       "station": "总干渠水文站",
       "basin": "黄河",
       "river": "黄河",
       "admin_region": "内蒙古",
-      "water_level_m": 1053.1,
+      "water_level_m": 1053.48,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
