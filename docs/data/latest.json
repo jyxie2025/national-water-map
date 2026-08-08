@@ -350,7 +350,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 7.59,
+      "water_level_m": 8.59,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -8479,7 +8479,7 @@
       "basin": "长江",
       "river": "汉江",
       "admin_region": "湖北",
-      "water_level_m": 39.29,
+      "water_level_m": 39.32,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
