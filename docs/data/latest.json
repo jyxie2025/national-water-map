@@ -9249,7 +9249,7 @@
       "basin": "长江",
       "river": "渚河",
       "admin_region": "陕西",
-      "water_level_m": 333.6,
+      "water_level_m": 333.17,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12560,7 +12560,7 @@
       "basin": "闽江",
       "river": "大樟溪",
       "admin_region": "福建",
-      "water_level_m": 24.54,
+      "water_level_m": 24.52,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
