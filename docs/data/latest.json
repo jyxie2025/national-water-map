@@ -4844,12 +4844,12 @@
     },
     {
       "station_id": "1294",
-      "datetime": "2026-08-13T08:00:00+08:00",
+      "datetime": "2026-08-14T08:00:00+08:00",
       "station": "隆安",
       "basin": "珠江",
       "river": "右江",
       "admin_region": "广西",
-      "water_level_m": 76.99,
+      "water_level_m": 76.83,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
