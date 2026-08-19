@@ -9,7 +9,7 @@
       "basin": "万泉河",
       "river": "万泉河",
       "admin_region": "海南",
-      "water_level_m": 1.71,
+      "water_level_m": 1.7,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -350,7 +350,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.69,
+      "water_level_m": 8.7,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 22.88,
+      "water_level_m": 22.9,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -999,7 +999,7 @@
       "basin": "昌化江",
       "river": "昌化江",
       "admin_region": "海南",
-      "water_level_m": 14.72,
+      "water_level_m": 14.7,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -4525,12 +4525,12 @@
     },
     {
       "station_id": "1328",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "惠阳(二)",
       "basin": "珠江",
       "river": "东江",
       "admin_region": "广东",
-      "water_level_m": 10.73,
+      "water_level_m": 10.72,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -4613,12 +4613,12 @@
     },
     {
       "station_id": "1316",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "清远(三)",
       "basin": "珠江",
       "river": "北江",
       "admin_region": "广东",
-      "water_level_m": 10.3,
+      "water_level_m": 10.26,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -4635,12 +4635,12 @@
     },
     {
       "station_id": "1314",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "英德(五)",
       "basin": "珠江",
       "river": "北江",
       "admin_region": "广东",
-      "water_level_m": 24.05,
+      "water_level_m": 24.08,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -4668,12 +4668,12 @@
     },
     {
       "station_id": "1334",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "三水(二)",
       "basin": "珠江",
       "river": "北江干流水道",
       "admin_region": "广东",
-      "water_level_m": 1.24,
+      "water_level_m": 1.38,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -4877,12 +4877,12 @@
     },
     {
       "station_id": "1331",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "麒麟咀(二)",
       "basin": "珠江",
       "river": "增江",
       "admin_region": "广东",
-      "water_level_m": 5.96,
+      "water_level_m": 5.95,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5240,12 +5240,12 @@
     },
     {
       "station_id": "1322",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "珠坑",
       "basin": "珠江",
       "river": "滨江",
       "admin_region": "广东",
-      "water_level_m": 19.39,
+      "water_level_m": 19.1,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5460,12 +5460,12 @@
     },
     {
       "station_id": "1249",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "德庆(二)",
       "basin": "珠江",
       "river": "西江",
       "admin_region": "广东",
-      "water_level_m": 2.96,
+      "water_level_m": 2.99,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5482,12 +5482,12 @@
     },
     {
       "station_id": "1332",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "马口",
       "basin": "珠江",
       "river": "西江干流水道",
       "admin_region": "广东",
-      "water_level_m": 1.24,
+      "water_level_m": 1.38,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5515,12 +5515,12 @@
     },
     {
       "station_id": "1308",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "古榄",
       "basin": "珠江",
       "river": "贺江",
       "admin_region": "广东",
-      "water_level_m": 24.07,
+      "water_level_m": 23.87,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5768,12 +5768,12 @@
     },
     {
       "station_id": "1354",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "缸瓦窑(三)",
       "basin": "粤西沿海诸河",
       "river": "九洲江",
       "admin_region": "广东",
-      "water_level_m": 3.62,
+      "water_level_m": 3.65,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12819,23 +12819,23 @@
     },
     {
       "station_id": "1399",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "梅县(四)",
       "basin": "韩江",
       "river": "梅江",
       "admin_region": "广东",
-      "water_level_m": 74.1,
+      "water_level_m": 74.36,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
     {
       "station_id": "1343",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "横山(二)",
       "basin": "韩江",
       "river": "梅江",
       "admin_region": "广东",
-      "water_level_m": 45.24,
+      "water_level_m": 44.91,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12863,12 +12863,12 @@
     },
     {
       "station_id": "1348",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "溪口",
       "basin": "韩江",
       "river": "汀江",
       "admin_region": "广东",
-      "water_level_m": 7.8,
+      "water_level_m": 7.57,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12885,12 +12885,12 @@
     },
     {
       "station_id": "1400",
-      "datetime": "2026-08-18T08:00:00+08:00",
+      "datetime": "2026-08-19T08:00:00+08:00",
       "station": "三河坝",
       "basin": "韩江",
       "river": "韩江",
       "admin_region": "广东",
-      "water_level_m": 37.71,
+      "water_level_m": 37.64,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
