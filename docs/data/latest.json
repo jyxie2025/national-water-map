@@ -12962,12 +12962,12 @@
     },
     {
       "station_id": "369",
-      "datetime": "2026-08-22T08:00:00+08:00",
+      "datetime": "2026-08-23T08:00:00+08:00",
       "station": "东园",
       "basin": "黄河",
       "river": "五当沟",
       "admin_region": "内蒙古",
-      "water_level_m": 1036.38,
+      "water_level_m": 1036.36,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
