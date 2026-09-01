@@ -12461,7 +12461,7 @@
       "basin": "闽东南诸河",
       "river": "西溪",
       "admin_region": "福建",
-      "water_level_m": 3.78,
+      "water_level_m": 3.62,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12703,7 +12703,7 @@
       "basin": "闽江",
       "river": "沙溪",
       "admin_region": "福建",
-      "water_level_m": 158.1,
+      "water_level_m": 158.23,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
