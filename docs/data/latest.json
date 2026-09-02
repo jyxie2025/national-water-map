@@ -1071,12 +1071,12 @@
     },
     {
       "station_id": "82",
-      "datetime": "2026-09-01T08:00:00+08:00",
+      "datetime": "2026-09-02T08:00:00+08:00",
       "station": "大赉",
       "basin": "松花江",
       "river": "嫩江",
       "admin_region": "吉林",
-      "water_level_m": 129.18,
+      "water_level_m": 129.12,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -1159,12 +1159,12 @@
     },
     {
       "station_id": "86",
-      "datetime": "2026-09-01T08:00:00+08:00",
+      "datetime": "2026-09-02T08:00:00+08:00",
       "station": "洮南",
       "basin": "松花江",
       "river": "洮儿河",
       "admin_region": "吉林",
-      "water_level_m": 145.34,
+      "water_level_m": 145.28,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -1258,12 +1258,12 @@
     },
     {
       "station_id": "53",
-      "datetime": "2026-09-01T08:00:00+08:00",
+      "datetime": "2026-09-02T08:00:00+08:00",
       "station": "大甸子",
       "basin": "松花江吉林段",
       "river": "古洞河",
       "admin_region": "吉林",
-      "water_level_m": 541.64,
+      "water_level_m": 542.7,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
