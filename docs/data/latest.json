@@ -1659,7 +1659,7 @@
       "basin": "海河",
       "river": "十里河",
       "admin_region": "山西",
-      "water_level_m": 1075.13,
+      "water_level_m": 1075.11,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12065,7 +12065,7 @@
       "basin": "长江流域",
       "river": "禾水",
       "admin_region": "江西",
-      "water_level_m": 111.17,
+      "water_level_m": 111.24,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
