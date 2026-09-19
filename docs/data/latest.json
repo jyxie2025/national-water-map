@@ -972,12 +972,12 @@
     },
     {
       "station_id": "1095",
-      "datetime": "2026-09-18T08:00:00+08:00",
+      "datetime": "2026-09-19T08:00:00+08:00",
       "station": "贵溪",
       "basin": "弋阳到梅港",
       "river": "信江",
       "admin_region": "江西",
-      "water_level_m": 29.67,
+      "water_level_m": 29.71,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -2044,7 +2044,7 @@
       "basin": "海河",
       "river": "桑干河",
       "admin_region": "山西",
-      "water_level_m": 1026.92,
+      "water_level_m": 1026.94,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
