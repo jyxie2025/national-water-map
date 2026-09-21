@@ -350,7 +350,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.23,
+      "water_level_m": 8.2,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 23.29,
+      "water_level_m": 23.3,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -999,7 +999,7 @@
       "basin": "昌化江",
       "river": "昌化江",
       "admin_region": "海南",
-      "water_level_m": 16.72,
+      "water_level_m": 16.7,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -9436,7 +9436,7 @@
       "basin": "长江",
       "river": "湘江",
       "admin_region": "湖南",
-      "water_level_m": 32.09,
+      "water_level_m": 32.11,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -14309,7 +14309,7 @@
       "basin": "黄河",
       "river": "潇河",
       "admin_region": "山西",
-      "water_level_m": 900.81,
+      "water_level_m": 900.82,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
