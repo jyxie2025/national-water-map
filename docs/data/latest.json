@@ -350,7 +350,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.57,
+      "water_level_m": 8.6,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 23.06,
+      "water_level_m": 23.1,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -999,7 +999,7 @@
       "basin": "昌化江",
       "river": "昌化江",
       "admin_region": "海南",
-      "water_level_m": 16.59,
+      "water_level_m": 16.6,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -2292,12 +2292,12 @@
     },
     {
       "station_id": "191",
-      "datetime": "2026-09-23T08:00:00+08:00",
+      "datetime": "2026-09-24T08:00:00+08:00",
       "station": "淋河桥",
       "basin": "海河",
       "river": "淋河",
       "admin_region": "天津",
-      "water_level_m": 22.31,
+      "water_level_m": 22.28,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5757,12 +5757,12 @@
     },
     {
       "station_id": "1333",
-      "datetime": "2026-09-23T08:00:00+08:00",
+      "datetime": "2026-09-24T08:00:00+08:00",
       "station": "天河(二)",
       "basin": "磨刀门",
       "river": "西海水道",
       "admin_region": "广东",
-      "water_level_m": 1.6,
+      "water_level_m": 1.4,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5806,7 +5806,7 @@
       "basin": "艾比湖",
       "river": "博尔塔拉河",
       "admin_region": "新疆",
-      "water_level_m": 1320.89,
+      "water_level_m": 1320.88,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
