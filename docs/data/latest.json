@@ -350,7 +350,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.36,
+      "water_level_m": 8.4,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 22.96,
+      "water_level_m": 23.0,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -999,7 +999,7 @@
       "basin": "昌化江",
       "river": "昌化江",
       "admin_region": "海南",
-      "water_level_m": 16.07,
+      "water_level_m": 16.1,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -5757,12 +5757,12 @@
     },
     {
       "station_id": "1333",
-      "datetime": "2026-09-29T08:00:00+08:00",
+      "datetime": "2026-09-30T08:00:00+08:00",
       "station": "天河(二)",
       "basin": "磨刀门",
       "river": "西海水道",
       "admin_region": "广东",
-      "water_level_m": 0.57,
+      "water_level_m": 0.65,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -6538,7 +6538,7 @@
     },
     {
       "station_id": "98",
-      "datetime": "2026-09-29T08:00:00+08:00",
+      "datetime": "2026-09-30T08:00:00+08:00",
       "station": "万合永",
       "basin": "辽河流域",
       "river": "百岔河",
@@ -6560,23 +6560,23 @@
     },
     {
       "station_id": "92",
-      "datetime": "2026-09-29T08:00:00+08:00",
+      "datetime": "2026-09-30T08:00:00+08:00",
       "station": "兴隆坡",
       "basin": "辽河流域",
       "river": "老哈河",
       "admin_region": "内蒙古",
-      "water_level_m": 455.93,
+      "water_level_m": 455.9,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
     {
       "station_id": "93",
-      "datetime": "2026-09-29T08:00:00+08:00",
+      "datetime": "2026-09-30T08:00:00+08:00",
       "station": "赤峰(五)",
       "basin": "辽河流域",
       "river": "英金河",
       "admin_region": "内蒙古",
-      "water_level_m": 558.82,
+      "water_level_m": 558.75,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
