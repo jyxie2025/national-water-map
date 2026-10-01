@@ -350,7 +350,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.52,
+      "water_level_m": 8.5,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 22.97,
+      "water_level_m": 23.0,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -999,7 +999,7 @@
       "basin": "昌化江",
       "river": "昌化江",
       "admin_region": "海南",
-      "water_level_m": 16.52,
+      "water_level_m": 16.5,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -2490,12 +2490,12 @@
     },
     {
       "station_id": "233",
-      "datetime": "2026-09-30T08:00:00+08:00",
+      "datetime": "2026-10-01T08:00:00+08:00",
       "station": "周庄",
       "basin": "海河",
       "river": "漕河",
       "admin_region": "河北",
-      "water_level_m": 155.86,
+      "water_level_m": 155.84,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -2886,7 +2886,7 @@
     },
     {
       "station_id": "171",
-      "datetime": "2026-09-30T08:00:00+08:00",
+      "datetime": "2026-10-01T08:00:00+08:00",
       "station": "大河口(四)",
       "basin": "海河流域",
       "river": "吐力根河",
@@ -5267,7 +5267,7 @@
       "basin": "珠江",
       "river": "潭水河",
       "admin_region": "广东",
-      "water_level_m": 17.16,
+      "water_level_m": 17.09,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
