@@ -532,12 +532,12 @@
     },
     {
       "station_id": "21",
-      "datetime": "2026-10-01T08:00:00+08:00",
+      "datetime": "2026-10-02T08:00:00+08:00",
       "station": "托克逊",
       "basin": "塔里木河",
       "river": "木扎提河",
       "admin_region": "新疆",
-      "water_level_m": 1164.84,
+      "water_level_m": 1164.86,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -3243,7 +3243,7 @@
       "basin": "淮河",
       "river": "奎河",
       "admin_region": "安徽",
-      "water_level_m": 23.03,
+      "water_level_m": 23.04,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -6538,7 +6538,7 @@
     },
     {
       "station_id": "98",
-      "datetime": "2026-10-01T08:00:00+08:00",
+      "datetime": "2026-10-02T08:00:00+08:00",
       "station": "万合永",
       "basin": "辽河流域",
       "river": "百岔河",
@@ -6560,23 +6560,23 @@
     },
     {
       "station_id": "92",
-      "datetime": "2026-10-01T08:00:00+08:00",
+      "datetime": "2026-10-02T08:00:00+08:00",
       "station": "兴隆坡",
       "basin": "辽河流域",
       "river": "老哈河",
       "admin_region": "内蒙古",
-      "water_level_m": 455.9,
+      "water_level_m": 455.93,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
     {
       "station_id": "93",
-      "datetime": "2026-10-01T08:00:00+08:00",
+      "datetime": "2026-10-02T08:00:00+08:00",
       "station": "赤峰(五)",
       "basin": "辽河流域",
       "river": "英金河",
       "admin_region": "内蒙古",
-      "water_level_m": 558.75,
+      "water_level_m": 558.87,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
