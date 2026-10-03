@@ -4,12 +4,12 @@
   "records": [
     {
       "station_id": "1405",
-      "datetime": "2026-10-01T08:00:00+08:00",
+      "datetime": "2026-10-03T08:00:00+08:00",
       "station": "加积(二)",
       "basin": "万泉河",
       "river": "万泉河",
       "admin_region": "海南",
-      "water_level_m": 1.7,
+      "water_level_m": 1.6,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -339,7 +339,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 27.29,
+      "water_level_m": 27.3,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -350,7 +350,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.34,
+      "water_level_m": 8.4,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 22.83,
+      "water_level_m": 22.8,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -999,7 +999,7 @@
       "basin": "昌化江",
       "river": "昌化江",
       "admin_region": "海南",
-      "water_level_m": 16.61,
+      "water_level_m": 16.6,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -1918,12 +1918,12 @@
     },
     {
       "station_id": "204",
-      "datetime": "2026-10-01T08:00:00+08:00",
+      "datetime": "2026-10-03T08:00:00+08:00",
       "station": "孤山",
       "basin": "海河",
       "river": "御河",
       "admin_region": "山西",
-      "water_level_m": 1086.81,
+      "water_level_m": 1086.8,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -2044,7 +2044,7 @@
       "basin": "海河",
       "river": "桑干河",
       "admin_region": "山西",
-      "water_level_m": 1026.75,
+      "water_level_m": 1026.76,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -2292,12 +2292,12 @@
     },
     {
       "station_id": "191",
-      "datetime": "2026-10-01T08:00:00+08:00",
+      "datetime": "2026-10-03T08:00:00+08:00",
       "station": "淋河桥",
       "basin": "海河",
       "river": "淋河",
       "admin_region": "天津",
-      "water_level_m": 22.24,
+      "water_level_m": 22.23,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -6538,7 +6538,7 @@
     },
     {
       "station_id": "98",
-      "datetime": "2026-10-02T08:00:00+08:00",
+      "datetime": "2026-10-03T08:00:00+08:00",
       "station": "万合永",
       "basin": "辽河流域",
       "river": "百岔河",
@@ -6560,7 +6560,7 @@
     },
     {
       "station_id": "92",
-      "datetime": "2026-10-02T08:00:00+08:00",
+      "datetime": "2026-10-03T08:00:00+08:00",
       "station": "兴隆坡",
       "basin": "辽河流域",
       "river": "老哈河",
@@ -6571,7 +6571,7 @@
     },
     {
       "station_id": "93",
-      "datetime": "2026-10-02T08:00:00+08:00",
+      "datetime": "2026-10-03T08:00:00+08:00",
       "station": "赤峰(五)",
       "basin": "辽河流域",
       "river": "英金河",
@@ -10740,12 +10740,12 @@
     },
     {
       "station_id": "641",
-      "datetime": "2026-10-02T08:00:00+08:00",
+      "datetime": "2026-10-03T08:00:00+08:00",
       "station": "直门达",
       "basin": "长江",
       "river": "通天河",
       "admin_region": "青海",
-      "water_level_m": 3526.71,
+      "water_level_m": 3526.47,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12808,7 +12808,7 @@
     },
     {
       "station_id": "1360",
-      "datetime": "2026-10-01T08:00:00+08:00",
+      "datetime": "2026-10-03T08:00:00+08:00",
       "station": "陵水",
       "basin": "陵水河",
       "river": "陵水河",
