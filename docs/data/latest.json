@@ -4,12 +4,12 @@
   "records": [
     {
       "station_id": "1405",
-      "datetime": "2026-10-03T08:00:00+08:00",
+      "datetime": "2026-10-04T08:00:00+08:00",
       "station": "加积(二)",
       "basin": "万泉河",
       "river": "万泉河",
       "admin_region": "海南",
-      "water_level_m": 1.6,
+      "water_level_m": 1.71,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -6719,7 +6719,7 @@
       "basin": "长江",
       "river": "东洞庭湖",
       "admin_region": "湖南",
-      "water_level_m": 23.43,
+      "water_level_m": 23.42,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12808,12 +12808,12 @@
     },
     {
       "station_id": "1360",
-      "datetime": "2026-10-03T08:00:00+08:00",
+      "datetime": "2026-10-04T08:00:00+08:00",
       "station": "陵水",
       "basin": "陵水河",
       "river": "陵水河",
       "admin_region": "海南",
-      "water_level_m": 3.2,
+      "water_level_m": 3.27,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
