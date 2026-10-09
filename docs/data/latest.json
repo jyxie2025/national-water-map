@@ -9,7 +9,7 @@
       "basin": "万泉河",
       "river": "万泉河",
       "admin_region": "海南",
-      "water_level_m": 2.91,
+      "water_level_m": 2.9,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -328,7 +328,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 8.21,
+      "water_level_m": 8.2,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -339,7 +339,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 27.61,
+      "water_level_m": 27.6,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -350,7 +350,7 @@
       "basin": "南渡江",
       "river": "南渡江",
       "admin_region": "海南",
-      "water_level_m": 7.99,
+      "water_level_m": 8.0,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 23.27,
+      "water_level_m": 23.3,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -532,12 +532,12 @@
     },
     {
       "station_id": "21",
-      "datetime": "2026-10-08T08:00:00+08:00",
+      "datetime": "2026-10-09T08:00:00+08:00",
       "station": "托克逊",
       "basin": "塔里木河",
       "river": "木扎提河",
       "admin_region": "新疆",
-      "water_level_m": 1164.86,
+      "water_level_m": 1164.87,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -999,7 +999,7 @@
       "basin": "昌化江",
       "river": "昌化江",
       "admin_region": "海南",
-      "water_level_m": 16.69,
+      "water_level_m": 16.7,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -2666,12 +2666,12 @@
     },
     {
       "station_id": "306",
-      "datetime": "2026-10-08T08:00:00+08:00",
+      "datetime": "2026-10-09T08:00:00+08:00",
       "station": "东茨村",
       "basin": "海河",
       "river": "白沟河",
       "admin_region": "河北",
-      "water_level_m": 19.83,
+      "water_level_m": 19.84,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -6538,7 +6538,7 @@
     },
     {
       "station_id": "98",
-      "datetime": "2026-10-08T08:00:00+08:00",
+      "datetime": "2026-10-09T08:00:00+08:00",
       "station": "万合永",
       "basin": "辽河流域",
       "river": "百岔河",
@@ -6560,7 +6560,7 @@
     },
     {
       "station_id": "92",
-      "datetime": "2026-10-08T08:00:00+08:00",
+      "datetime": "2026-10-09T08:00:00+08:00",
       "station": "兴隆坡",
       "basin": "辽河流域",
       "river": "老哈河",
@@ -6571,7 +6571,7 @@
     },
     {
       "station_id": "93",
-      "datetime": "2026-10-08T08:00:00+08:00",
+      "datetime": "2026-10-09T08:00:00+08:00",
       "station": "赤峰(五)",
       "basin": "辽河流域",
       "river": "英金河",
@@ -12038,12 +12038,12 @@
     },
     {
       "station_id": "1091",
-      "datetime": "2026-10-08T08:00:00+08:00",
+      "datetime": "2026-10-09T08:00:00+08:00",
       "station": "马口",
       "basin": "长江流域",
       "river": "相水",
       "admin_region": "江西",
-      "water_level_m": 74.66,
+      "water_level_m": 74.59,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12681,7 +12681,7 @@
       "basin": "闽江",
       "river": "梅溪",
       "admin_region": "福建",
-      "water_level_m": 13.2,
+      "water_level_m": 13.22,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12725,7 +12725,7 @@
       "basin": "闽江",
       "river": "西溪",
       "admin_region": "福建",
-      "water_level_m": 311.89,
+      "water_level_m": 311.9,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12813,7 +12813,7 @@
       "basin": "陵水河",
       "river": "陵水河",
       "admin_region": "海南",
-      "water_level_m": 3.37,
+      "water_level_m": 3.4,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
