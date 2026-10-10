@@ -2292,7 +2292,7 @@
     },
     {
       "station_id": "191",
-      "datetime": "2026-10-09T08:00:00+08:00",
+      "datetime": "2026-10-10T08:00:00+08:00",
       "station": "淋河桥",
       "basin": "海河",
       "river": "淋河",
@@ -13413,12 +13413,12 @@
     },
     {
       "station_id": "335",
-      "datetime": "2026-10-09T08:00:00+08:00",
+      "datetime": "2026-10-10T08:00:00+08:00",
       "station": "红崖子",
       "basin": "黄河",
       "river": "庄浪河",
       "admin_region": "甘肃",
-      "water_level_m": 1562.3,
+      "water_level_m": 1562.33,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
