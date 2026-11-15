@@ -361,7 +361,7 @@
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 23.28,
+      "water_level_m": 23.27,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -1918,7 +1918,7 @@
     },
     {
       "station_id": "204",
-      "datetime": "2026-11-14T08:00:00+08:00",
+      "datetime": "2026-11-15T08:00:00+08:00",
       "station": "孤山",
       "basin": "海河",
       "river": "御河",
@@ -8820,7 +8820,7 @@
       "basin": "长江",
       "river": "沱江",
       "admin_region": "四川",
-      "water_level_m": 433.41,
+      "water_level_m": 431.33,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -13666,12 +13666,12 @@
     },
     {
       "station_id": "566",
-      "datetime": "2026-11-13T08:00:00+08:00",
+      "datetime": "2026-11-15T08:00:00+08:00",
       "station": "赵城",
       "basin": "黄河",
       "river": "汾河",
       "admin_region": "山西",
-      "water_level_m": 472.83,
+      "water_level_m": 472.84,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
