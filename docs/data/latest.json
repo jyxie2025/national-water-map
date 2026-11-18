@@ -499,12 +499,12 @@
     },
     {
       "station_id": "23",
-      "datetime": "2026-11-17T08:00:00+08:00",
+      "datetime": "2026-11-18T08:00:00+08:00",
       "station": "兰干",
       "basin": "塔里木河",
       "river": "库车河",
       "admin_region": "新疆",
-      "water_level_m": 1275.63,
+      "water_level_m": 1275.62,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -9277,12 +9277,12 @@
     },
     {
       "station_id": "802",
-      "datetime": "2026-11-17T08:00:00+08:00",
+      "datetime": "2026-11-18T08:00:00+08:00",
       "station": "三汇",
       "basin": "长江",
       "river": "渠江",
       "admin_region": "四川",
-      "water_level_m": 243.57,
+      "water_level_m": 243.43,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
