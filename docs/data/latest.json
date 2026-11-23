@@ -4,12 +4,12 @@
   "records": [
     {
       "station_id": "1405",
-      "datetime": "2026-11-21T08:00:00+08:00",
+      "datetime": "2026-11-23T08:00:00+08:00",
       "station": "加积(二)",
       "basin": "万泉河",
       "river": "万泉河",
       "admin_region": "海南",
-      "water_level_m": 1.89,
+      "water_level_m": 2.02,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -356,12 +356,12 @@
     },
     {
       "station_id": "1404",
-      "datetime": "2026-11-21T08:00:00+08:00",
+      "datetime": "2026-11-23T08:00:00+08:00",
       "station": "三滩",
       "basin": "南渡江",
       "river": "新吴溪",
       "admin_region": "海南",
-      "water_level_m": 22.99,
+      "water_level_m": 22.98,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -2424,12 +2424,12 @@
     },
     {
       "station_id": "251",
-      "datetime": "2026-11-21T08:00:00+08:00",
+      "datetime": "2026-11-23T08:00:00+08:00",
       "station": "北中山(二)",
       "basin": "海河",
       "river": "滹沱河",
       "admin_region": "河北",
-      "water_level_m": 31.26,
+      "water_level_m": 31.23,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -9453,12 +9453,12 @@
     },
     {
       "station_id": "1140",
-      "datetime": "2026-11-22T08:00:00+08:00",
+      "datetime": "2026-11-23T08:00:00+08:00",
       "station": "老埠头",
       "basin": "长江",
       "river": "湘江",
       "admin_region": "湖南",
-      "water_level_m": 99.63,
+      "water_level_m": 99.7,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
@@ -12808,12 +12808,12 @@
     },
     {
       "station_id": "1360",
-      "datetime": "2026-11-21T08:00:00+08:00",
+      "datetime": "2026-11-23T08:00:00+08:00",
       "station": "陵水",
       "basin": "陵水河",
       "river": "陵水河",
       "admin_region": "海南",
-      "water_level_m": 1.87,
+      "water_level_m": 2.02,
       "alert_level_m": 0.0,
       "reading_status": "current"
     },
